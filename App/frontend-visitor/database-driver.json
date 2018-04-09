@@ -1,0 +1,41 @@
+{
+	dates: [
+		{
+			date: "2018-04-03",
+			events: [
+				{
+					label: "IA-dagen",
+					position: "NI:3",
+					description: "blablabla",
+					exhibitors: [
+						{
+							label: "Paca",
+							description: "blablabal om paca etc"
+						},
+						{
+							label: "Politweet",
+							description: "blbalba om Politweet"
+						}
+					]
+				},
+				{
+					label: "Kåren rådgivning",
+					position: "NI:4",
+					description: "blbalbal",
+					exhibitors: [
+						{
+							label: "Kåren",
+							description: "om kåren blbalbal"
+						}
+					]
+				}
+			]
+		},
+		{
+			date: "2018-05-30",
+			events: [
+
+			]
+		}
+	]
+}
