@@ -31,7 +31,7 @@ const getDateCards = () => {
 			events={[
 				{position: "Orkanen", label: "Dyrt kaffe"}
 			]}
-		/>,
+		/>
 	];
 
 	return dateCards;
