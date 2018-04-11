@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './App.css';
 import DateCard from './DateCard';
 
@@ -38,7 +38,7 @@ const getDateCards = () => {
 }
 
 // Main component.
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
 			<div className="App">

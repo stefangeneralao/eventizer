@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './DatePage.css';
 import EventCard from './EventCard';
 
@@ -39,7 +39,7 @@ const getDate = () => {
 }
 
 // Main component.
-class DatePage extends Component {
+class DatePage extends React.Component {
   render() {
     return (
 			<div className="DatePage">
@@ -49,7 +49,7 @@ class DatePage extends Component {
 				</header>
 
 				<main>
-					
+
 					{getEventCards()}
 				</main>
 			</div>

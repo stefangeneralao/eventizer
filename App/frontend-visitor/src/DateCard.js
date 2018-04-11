@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-class DateCard extends Component {
+class DateCard extends React.Component {
 	getDate() {
 		const date = this.props.date;
 
