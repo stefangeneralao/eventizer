@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import DateCard from './DateCard';
+import DateCard from './Components/DateCard';
 
 // TEMPORARY!
 // Database-driver. This function will be replaced by database.
