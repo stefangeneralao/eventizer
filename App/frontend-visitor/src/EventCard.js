@@ -1,15 +1,7 @@
 import React from 'react';
 
-<<<<<<< HEAD
-
-class EventCard extends React.Component {
-
-
-
-=======
 //Component for EventCard.
 class EventCard extends Component {
->>>>>>> a5394a9e683fbd83c86ef7a47028ff5cfb8b8951
 	render() {
 		return (
 			<div className="EventCard">
