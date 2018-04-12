@@ -1,7 +1,7 @@
 import React from 'react';
 
 //Component for EventCard.
-class EventCard extends Component {
+class EventCard extends React.Component {
 	render() {
 		return (
 			<div className="EventCard">

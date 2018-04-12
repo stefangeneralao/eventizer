@@ -1,5 +1,4 @@
 import React from 'react';
-import './DatePage.css';
 import EventCard from './EventCard';
 
 // TEMPORARY!
