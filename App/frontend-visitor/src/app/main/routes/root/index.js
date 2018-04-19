@@ -1,47 +1,27 @@
 import React from 'react';
 import DateCard from './DateCard';
 
-// TEMPORARY!
-// Database-driver. This function will be replaced by database.
-const getDateCards = () => {
-	// The key-attribute will be replaced by the primary key from the database.
-	const dateCards = [
-		<DateCard
-			key="2018-04-03"
-			date="2018-04-03"
-			events={[
-				{position: "NI:3", label: "IA-dagen"},
-				{position: "NI:4", label: "Kåren rådgivning"},
-				{position: "G8:4", label: "Mäklarmässa"}
-			]}
-		/>,
-
-		<DateCard
-			key="2018-04-15"
-			date="2018-04-15"
-			events={[
-				{position: "Kårhuset", label: "Gratis kaffe"}
-			]}
-		/>,
-
-		<DateCard
-			key="2018-06-03"
-			date="2018-06-03"
-			events={[
-				{position: "Orkanen", label: "Dyrt kaffe"}
-			]}
-		/>
-	];
+const getDateCards = (store) => {
+	const dateCards = store.dates.map((cardData) => {
+		const date = cardData.date;
+		const events = cardData.events;
+		return (
+			<DateCard
+				key={date}
+				date={date}
+				events={events}
+			/>
+		);
+	});
 
 	return dateCards;
 }
 
 class Root extends React.Component {
 	render() {
-		console.log(this.props.store);
 		return (
 			<div>
-				{getDateCards()}
+				{getDateCards(this.props.store)}
 			</div>
 		);
 	}
