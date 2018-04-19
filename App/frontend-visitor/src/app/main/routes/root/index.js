@@ -1,6 +1,5 @@
 import React from 'react';
-import './App.css';
-import DateCard from './Components/DateCard';
+import DateCard from './DateCard';
 
 // TEMPORARY!
 // Database-driver. This function will be replaced by database.
@@ -37,21 +36,15 @@ const getDateCards = () => {
 	return dateCards;
 }
 
-// Main component.
-class App extends React.Component {
-  render() {
-    return (
-			<div className="App">
-				<header className="App-header">
-					<h1 className="App-title">Eventizer</h1>
-				</header>
-
-				<main>
-					{getDateCards()}
-				</main>
+class Root extends React.Component {
+	render() {
+		console.log(this.props.store);
+		return (
+			<div>
+				{getDateCards()}
 			</div>
 		);
-  }
+	}
 }
 
-export default App;
+export default Root;

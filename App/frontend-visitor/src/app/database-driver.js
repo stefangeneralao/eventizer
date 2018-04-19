@@ -1,4 +1,4 @@
-{
+const data = {
 	"dates": [
 		{
 			"date": "2018-04-18",
@@ -133,4 +133,8 @@
 			]
 		}
 	]
-}
+};
+
+// const data = {}
+
+export default data;
