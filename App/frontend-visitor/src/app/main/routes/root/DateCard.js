@@ -1,6 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class DateCard extends React.Component {
+	getImageComponent() {
+		return null;
+	}
+
 	getDate() {
 		const date = this.props.date;
 
@@ -13,14 +18,18 @@ class DateCard extends React.Component {
 
 	getEvents() {
 		const events = this.props.events.map((event, i) => {
+			const onClickLink = "event/" + event.label;
+
 			return (
 				<div key={i} className="DateCard__event">
-					<div className="DateCard__event-position">
-						{event.position}
+					<div className="DateCard__event-location">
+						{event.location}
 					</div>
 
 					<div className="DateCard__event-label">
-						{event.label}
+						<Link to={onClickLink}>
+							{event.label}
+						</Link>
 					</div>
 				</div>
 			)
@@ -36,6 +45,7 @@ class DateCard extends React.Component {
 	render() {
 		return (
 			<div className="DateCard">
+				{this.getImageComponent()}
 				{this.getDate()}
 				{this.getEvents()}
 			</div>

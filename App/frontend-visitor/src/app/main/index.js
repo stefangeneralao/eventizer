@@ -5,7 +5,7 @@ import Event from './routes/event';
 import Exhibitor from './routes/exhibitor';
 import RegisterForm from './routes/registerform';
 
-const notFoundComponent = () => {
+const getNotFoundComponent = () => {
 	return (
 		<div>
 			not found
@@ -25,15 +25,33 @@ class Main extends React.Component {
 		);
 	}
 
+	getEvent() {
+		return (
+			<Event />
+		);
+	}
+
+	getExhibitor() {
+		return (
+			<Exhibitor />
+		);
+	}
+
+	getRegisterForm() {
+		return (
+			<RegisterForm />
+		);
+	}
+
 	render() {
 		return (
 			<main>
 				<Switch>
 					<Route exact path="/" component={this.getRoot} />
-					<Route path="/event" component={Event} />
-					<Route path="/exhibitor" component={Exhibitor} />
-					<Route path="/registerform" component={RegisterForm} />
-					<Route component={notFoundComponent} />
+					<Route path="/event" component={this.getEvent} />
+					<Route path="/exhibitor" component={this.getExhibitor} />
+					<Route path="/registerform" component={this.getRegisterForm} />
+					<Route component={getNotFoundComponent} />
 				</Switch>
 			</main>
 		);

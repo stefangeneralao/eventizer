@@ -5,7 +5,7 @@ const data = {
 			"events": [
 				{
 					"label": "IA-dagen",
-					"position": "NI:5",
+					"location": "NI:5",
 					"time": "15.00-17.00",
 					"description": "Här ska stå lite kort information om IA-dagen.",
 					"exhibitors": [
@@ -29,7 +29,7 @@ const data = {
 				},
 				{
 					"label": "Kåren informerar: Kårfullmäktige 2018/2019",
-					"position": "NI:0",
+					"location": "NI:0",
 					"time": "12.00-15.00",
 					"description": "Kåren informerar om någonting viktigt",
 					"exhibitors": [
@@ -41,7 +41,7 @@ const data = {
 				},
 				{
 					"label": "Sopplunch",
-					"position": "Kölsvinet (Kårhuset)",
+					"location": "Kölsvinet (Kårhuset)",
 					"time": "11.30-13.30",
 					"description": "Varje onsdag bjuder Kåren på gratis sopplunch för medlemmar",
 					"exhibitors": [
@@ -53,7 +53,7 @@ const data = {
 				},
 				{
 					"label": "Mäklarmässa",
-					"position": "Gäddan",
+					"location": "Gäddan",
 					"time": "10.00-16.00",
 					"descrption": "Mäklarmässa för studenter på mäklarprogrammet",
 					"exhibitors": [
@@ -78,7 +78,7 @@ const data = {
 			"events": [
 				{
 					"label": "Gratis kaffe",
-					"position": "Kölsvinet (Kårhuset)",
+					"location": "Kölsvinet (Kårhuset)",
 					"time": "",
 					"description": "Kåren tillgododser sina medlemmar med gratis kaffe",
 					"exhibitors": [
@@ -96,7 +96,7 @@ const data = {
 			"events": [
 				{
 					"label": "Projektutställning år 1",
-					"position": "NI:5",
+					"location": "NI:5",
 					"time":"10.00-14.00",
 					"description": "Studenter från kursen 'Systemutveckling och projekt' ställer ut sina projektarbeten",
 					"exhibitors": [
@@ -134,7 +134,5 @@ const data = {
 		}
 	]
 };
-
-// const data = {}
 
 export default data;

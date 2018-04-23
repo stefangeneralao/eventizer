@@ -4,38 +4,33 @@ import './index.css';
 import Main from './main';
 import store from './database-driver';
 
-const getStore = () => {
-	return store;
-}
-
 const BreadCrumb = () => {
 	return (
 		<div>breadcrumb</div>
 	);
 }
 
-// Main component.
+// Application root component.
 class App extends React.Component {
 	constructor() {
 		super();
 
 		this.state = {
-			breadcrumb: "/",
-			store: getStore()
+			breadcrumb: "/"
 		};
 	}
 
-  render() {
-    return (
+	render() {
+		return (
 			<div className="App">
 				<header className="App-header">
 					<h1 className="App-title">Eventizer</h1>
 				</header>
 				<BreadCrumb />
-				<Main store={this.state.store}/>
+				<Main store={store} />
 			</div>
 		);
-  }
+	}
 }
 
 export default App;
