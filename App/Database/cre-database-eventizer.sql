@@ -6,9 +6,9 @@ create table event(
   eventID     serial primary key,
   title       text,
   description text,
-  eventdate   char (10),
-  starttime   char(5),
-  endtime     char(5),
+  eventdate   date,
+  starttime   time,
+  endtime     time,
   locationID  serial,
 
     foreign key (locationID) references location(locationID)
@@ -48,14 +48,14 @@ create table location(
 );
 
 create table building(
-  lat         varchar(9),
-  long        varchar(9),
+  lat         float,
+  long        float,
   buildingID  serial,
 
   primary key (lat, long)
 );
 
-create table person(
+create table contact(
   email      text primary key,
   name       text
 );
