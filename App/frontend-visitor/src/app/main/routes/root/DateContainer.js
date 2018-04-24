@@ -1,9 +1,20 @@
 import React from 'react';
+import DateCard from './DateCard';
 
-//stubbe
+//Component that prints datecards
 class DateContainer extends React.Component {
+  printcards() {
+    return this.props.cardsData.map((cardData, i) => {
+        return <DateCard date={cardData.eventdate} events={cardData.events} key={i} />;
+    });
+  };
+
   render() {
-    return null;
+    return (
+      <div className="DateContainer">
+        {this.printcards()}
+      </div>
+    );
   }
 }
 
