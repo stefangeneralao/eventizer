@@ -2,7 +2,9 @@ import React from 'react';
 import './index.css';
 // import DateCard from './Components/DateCard';
 import Main from './main';
+import Footer from './footer';
 import store from './database-driver';
+
 
 const BreadCrumb = () => {
 	return (
@@ -28,6 +30,7 @@ class App extends React.Component {
 				</header>
 				<BreadCrumb />
 				<Main store={store} />
+                <Footer />
 			</div>
 		);
 	}
