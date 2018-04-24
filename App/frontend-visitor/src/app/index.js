@@ -2,6 +2,7 @@ import React from 'react';
 import './index.css';
 // import DateCard from './Components/DateCard';
 import Main from './main';
+import Header from './header';
 import store from './database-driver';
 
 const BreadCrumb = () => {
@@ -23,9 +24,7 @@ class App extends React.Component {
 	render() {
 		return (
 			<div className="App">
-				<header className="App-header">
-					<h1 className="App-title">Eventizer</h1>
-				</header>
+				<Header />
 				<BreadCrumb />
 				<Main store={store} />
 			</div>
