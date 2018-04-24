@@ -1,27 +1,26 @@
 import React from 'react';
-import DateCard from './DateCard';
+import DateContainer from './DateContainer';
 
-const getDateCards = (store) => {
-	const dateCards = store.dates.map((cardData) => {
-		const date = cardData.date;
-		const events = cardData.events;
-		return (
-			<DateCard
-				key={date}
-				date={date}
-				events={events}
-			/>
-		);
-	});
-
-	return dateCards;
-}
-
+//This component renders DateContainer
 class Root extends React.Component {
+	getCardsData() {
+		let cardsData = this.props.store.dates;
+
+		for(let i in cardsData) {
+			let eventsList = cardsData[i]['events'];
+
+			for(let j in eventsList) {
+				let eventItem = eventsList[j];
+				delete eventItem["exhibitors"];
+			}
+		}
+		return cardsData;
+	}
+
 	render() {
 		return (
 			<div>
-				{getDateCards(this.props.store)}
+				<DateContainer cardsData={this.getCardsData()} />
 			</div>
 		);
 	}
