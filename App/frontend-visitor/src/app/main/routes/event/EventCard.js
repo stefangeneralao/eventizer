@@ -1,13 +1,13 @@
 import React from 'react';
 
-//Component for EventCard.
+//Component that displays the event information.
 class EventCard extends React.Component {
 	getEventTitle() {
 		return this.props.title;
 	}
 
 	getEventDescription() {
-		return this.props.title;
+		return this.props.description;
 	}
 
 	getEventTime() {
@@ -19,9 +19,9 @@ class EventCard extends React.Component {
 	}
 
 	getEventExhibitors() {
-		// Hej Ellen. Denna ska returnera en lista med massa små eventExhibitors.
-		// Kör en sån map-funktion-grej som du gjorde någonstans.
-		return "";
+		return this.props.exhibitorContainers.map((exhibitorContainer, i) => {
+        return <ExhibitorContainer eventExhibitors={exhibitorContainer.eventExhibitors} key={i} />;
+    });
 	}
 
 	render() {
