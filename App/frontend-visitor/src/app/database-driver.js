@@ -28,7 +28,7 @@ const data = {
 					]
 				},
 				{
-					"label": "Kåren informerar: Kårfullmäktige 2018/2019",
+					"label": "Kåren informerar - Kårfullmäktige",
 					"location": "NI:0",
 					"time": "12.00-15.00",
 					"description": "Kåren informerar om någonting viktigt",
