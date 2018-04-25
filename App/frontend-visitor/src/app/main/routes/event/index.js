@@ -1,7 +1,10 @@
 import React from 'react';
 import EventCard from './EventCard';
 
+// This component renders the EventCards
 class Event extends React.Component {
+
+	// Fetches EventId from browser URL
 	getEventIdFromURL() {
 		let eventId = document.URL;
 		eventId = eventId.split('/')
@@ -9,6 +12,7 @@ class Event extends React.Component {
 		return eventId;
 	}
 
+	// Matches the URL with the right event and returns event data
 	getEventData() {
 		const eventId = this.getEventIdFromURL();
 		const dates = this.props.store.dates;
