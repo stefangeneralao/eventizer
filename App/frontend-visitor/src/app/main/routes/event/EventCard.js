@@ -20,9 +20,11 @@ class EventCard extends React.Component {
 	}
 
 	getEventExhibitors() {
-		return this.props.exhibitorContainers.map((exhibitorContainer, i) => {
-        return <ExhibitorContainer eventExhibitors={exhibitorContainer.eventExhibitors} key={i} />;
-    });
+		return <ExhibitorContainer eventExhibitors={this.props.exhibitors} />;
+
+		//return this.props.exhibitorContainers.map((exhibitorContainer, i) => {
+    //    return <ExhibitorContainer eventExhibitors={exhibitorContainer.eventExhibitors} key={i} />;
+    //});
 	}
 
 	render() {
