@@ -13,17 +13,17 @@ create table event(
   locationID  varchar (9)
 );
 
-create table exhibitor(
-  exhibitorID   serial primary key,
+create table exhibition(
+  exhibitionID   serial primary key,
   eventID       serial,
   title         text,
   description   text
 );
 
-create table exhibitorimg(
+create table exhibitionimg(
   imgID         serial primary key,
   img           bytea,
-  exhibitorID   serial
+  exhibitionID   serial
 );
 
 create table eventimg(
@@ -49,18 +49,18 @@ create table contact(
   name       text
 );
 
-create table exhibitorcontact(
-  exhibitorID serial,
+create table exhibitioncontact(
+  exhibitionID serial,
   email       text,
 
-  primary key (exhibitorID, email)
+  primary key (exhibitionID, email)
 );
 
 alter table building add primary key (buildingID);
 alter table event add foreign key (locationID) references location(locationID);
-alter table exhibitor add foreign key (eventID) references event(eventID);
-alter table exhibitorimg add foreign key (exhibitorID) references exhibitor(exhibitorID);
+alter table exhibition add foreign key (eventID) references event(eventID);
+alter table exhibitionimg add foreign key (exhibitionID) references exhibition(exhibitionID);
 alter table eventimg add foreign key (eventID) references event(eventID);
 alter table location add constraint fk_building foreign key (buildingID) references building(buildingID);
-alter table exhibitorcontact add foreign key (exhibitorID) references exhibitor(exhibitorID);
-alter table exhibitorcontact add foreign key (email) references contact(email);
+alter table exhibitioncontact add foreign key (exhibitionID) references exhibition(exhibitionID);
+alter table exhibitioncontact add foreign key (email) references contact(email);
