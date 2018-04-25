@@ -1,6 +1,6 @@
 import React from 'react';
 
-// Application root component.
+// Footer with information and function that keeps the copyright year updated.
 class Footer extends React.Component {
 	getYear() {
 	    return new Date().getFullYear();
