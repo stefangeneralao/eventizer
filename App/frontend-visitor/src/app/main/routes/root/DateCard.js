@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import EventContainer from './EventContainer';
 
 //Component that renders DateCard with image carousel, date and event information
