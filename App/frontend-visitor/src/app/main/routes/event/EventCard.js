@@ -1,4 +1,5 @@
 import React from 'react';
+import ExhibitorContainer from './ExhibitorContainer';
 
 //Component that displays the event information.
 class EventCard extends React.Component {
