@@ -28,11 +28,13 @@ class Event extends React.Component {
 					const description = eventListItem[j]['description'];
 					const date = dates[i]['date'];
 					const time = eventListItem[j]['time'];
+					const exhibitors = eventListItem[j]['exhibitors'];
 					const eventData = {
 						'title': title,
 						'description': description,
 						'date': date,
-						'time': time
+						'time': time,
+						'exhibitors': exhibitors
 					}
 					return eventData;
 				}
@@ -50,6 +52,7 @@ class Event extends React.Component {
 				description={eventData.description}
 				date={eventData.date}
 				time={eventData.time}
+				exhibitors={eventData.exhibitors}
 			/>
 		);
 	}
