@@ -52,6 +52,7 @@ create table contact(
 create table exhibitioncontact(
   exhibitionID serial,
   email       text,
+  APItoken    text,
 
   primary key (exhibitionID, email)
 );
