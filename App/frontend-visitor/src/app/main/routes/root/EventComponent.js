@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+//Component that renders EventCards with links to events
 class EventComponent extends React.Component {
   getTitle() {
     return<div className="EventComponent__event-label">
