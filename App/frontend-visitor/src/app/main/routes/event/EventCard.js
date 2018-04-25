@@ -2,28 +2,58 @@ import React from 'react';
 
 //Component for EventCard.
 class EventCard extends React.Component {
-	// render() {
-	// 	return (
-	// 		<div className="EventCard">
-	// 			<div className="EventCard__header">
-	// 				<div className="EventCard__name">
-	// 					{this.props.name}
-	// 				</div>
-	// 				<div className="EventCard__position">
-	// 					{this.props.position}
-	// 				</div>
-	// 			</div>
-	// 			<div className="EventCard__description">
-	// 				{this.props.description}
-	// 			</div>
-	// 		</div>
-	// 	);
-	// }
+	getEventTitle() {
+		return this.props.title;
+	}
+
+	getEventDescription() {
+		return this.props.title;
+	}
+
+	getEventTime() {
+		return this.props.time;
+	}
+
+	getEventDate() {
+		return this.props.date;
+	}
+
+	getEventExhibitors() {
+		// Hej Ellen. Denna ska returnera en lista med massa små eventExhibitors.
+		// Kör en sån map-funktion-grej som du gjorde någonstans.
+		return "";
+	}
 
 	render() {
-		console.log('props in EventCard', this.props);
+		const eventTitle = this.getEventTitle();
+		const eventDescription = this.getEventDescription();
+		const eventTime = this.getEventTime();
+		const eventDate = this.getEventDate();
+		const eventExhibitors = this.getEventExhibitors();
 
-		return null;
+		return (
+			<div>
+				<div>
+					{eventTitle}
+				</div>
+
+				<div>
+					{eventDescription}
+				</div>
+
+				<div>
+					{eventTime}
+				</div>
+
+				<div>
+					{eventDate}
+				</div>
+
+				<div>
+					{eventExhibitors}
+				</div>
+			</div>
+		);
 	}
 }
 
