@@ -17,17 +17,18 @@ class Main extends React.Component {
 	constructor() {
 		super();
 		this.getRoot = this.getRoot.bind(this);
+		this.getEvent = this.getEvent.bind(this);
 	}
 
 	getRoot() {
 		return (
-			<Root store={this.props.store}/>
+			<Root store={this.props.store} />
 		);
 	}
 
 	getEvent() {
 		return (
-			<Event />
+			<Event store={this.props.store} />
 		);
 	}
 
