@@ -1,4 +1,4 @@
-.App-header, .DatePage-header {
+.App-header, .DatePage-header, .App-footer {
   background-color: #222;
  	padding: 15px;
  	color: white;
@@ -18,6 +18,11 @@
 
 .App-title, .DatePage-title {
  	font-size: 2.5rem;
+}
+
+.App-footer {
+  font-size: 0.7rem;
+  text-align: center;
 }
 
 .DateCard, .EventCard {
