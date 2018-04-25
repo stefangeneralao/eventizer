@@ -5,7 +5,7 @@ import DateCard from './DateCard';
 class DateContainer extends React.Component {
   printcards() {
     return this.props.cardsData.map((cardData, i) => {
-        return <DateCard date={cardData.eventdate} events={cardData.events} key={i} />;
+        return <DateCard date={cardData.date} events={cardData.events} key={i} />;
     });
   };
 
