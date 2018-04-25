@@ -46,19 +46,29 @@
 	padding: 3px 0;
 }
 
-.DateCard__event-location {
+.EventComponent__event-location {
 	display: inline-block;
 	width: 100px;
 	padding-left: 30px;
 }
 
-.DateCard__event-label {
+.EventComponent__event-label {
 	display: inline;
 }
 
-.DateCard__event-label:hover {
+.EventComponent__event-label:hover {
 	color: #0645AD;
 	text-decoration: underline;
+}
+
+.EventComponent__event-time {
+  padding-left: 18.5%;
+}
+
+.EventComponent__event-description {
+  padding-left: 18.5%;
+  margin-bottom: 20px;
+
 }
 
 .EventCard__name {
