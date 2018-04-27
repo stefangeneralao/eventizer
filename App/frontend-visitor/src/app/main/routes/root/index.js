@@ -4,7 +4,7 @@ import DateContainer from './DateContainer';
 //This component renders DateContainer
 class Root extends React.Component {
 	getCardsData() {
-		let cardsData = this.props.store.dates;
+		let cardsData = JSON.parse(JSON.stringify(this.props.store.dates));
 
 		for(let i in cardsData) {
 			let eventsList = cardsData[i]['events'];
