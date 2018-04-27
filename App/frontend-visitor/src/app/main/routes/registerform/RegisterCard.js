@@ -1,5 +1,6 @@
 import React from 'react';
 
+//KOMMENTAR KOMMER 
 class RegisterCard extends React.Component {
 	render() {
 		return (
@@ -7,24 +8,32 @@ class RegisterCard extends React.Component {
                 <form>
                     <fieldset>
                         <legend>Fyll i information här!</legend>
-                            <p>
-                                Titel:
-                                <input type="text" name="title" />
-                            </p>
-                            <p>
-                                Beskrivning:
-                                <input type="text" name="description" />
-                            </p>
-                            <p>
-                                Bifoga filer:
-                                <input type="text" name="upload" />
-                            </p>
+                            <div className="RegisterTitel">
+                                <input type="text" name="title" placeholder="Fyll i titel" required/>
+                            </div>
             
-                            <p>
-                                <input type="submit" value="Skicka!" />
-                            </p>
+                            <div className="RegisterDescription">
+                                <input type="text" name="description" placeholder="Beskriv ditt projekt!" required/>
+                            </div>
+            
+                            <div className="RegisterDate">
+                                här ska vara en dropdown/ alt snyggt sätt att välja datum
+                            </div>
+            
+                            <div className="RegisterUploadFiles">
+                                här ska vi ha react-dropzone istället. I will fix!
+                                <input type="file" name="upload" /> 
+                            </div>
+            
+                            <div className="RegisterSubmit">
+                                <input type="button" value="Skicka!" onclick="alert('Din information är skickad!')"/>
+                            </div>
                             
-            //Dropdown - event
+                            <div>
+                                <i>
+                                    Du kommer att få ett bekräftelsemeddelande när informationen är godkänd och publicerad.
+                                </i>
+                            </div>
                     </fieldset>
                 </form>
             </div>
