@@ -8,6 +8,7 @@ const data = {
 					"location": "NI:5",
 					"time": "15.00-17.00",
 					"description": "Här ska stå lite kort information om IA-dagen.",
+					"img": "IA-bild",
 					"exhibitors": [
 						{
 							"label": "Gästföreläsning 1: Daniel Krusenstråhle, Fieldly",
@@ -32,6 +33,7 @@ const data = {
 					"location": "NI:0",
 					"time": "12.00-15.00",
 					"description": "Kåren informerar om någonting viktigt",
+					"img": "Kåren-bild",
 					"exhibitors": [
 						{
 							"label": "Kåren",
@@ -44,6 +46,7 @@ const data = {
 					"location": "Kölsvinet (Kårhuset)",
 					"time": "11.30-13.30",
 					"description": "Varje onsdag bjuder Kåren på gratis sopplunch för medlemmar",
+					"img": "Sopplunch-bild",
 					"exhibitors": [
 						{
 							"label": "Kåren",
@@ -56,6 +59,7 @@ const data = {
 					"location": "Gäddan",
 					"time": "10.00-16.00",
 					"descrption": "Mäklarmässa för studenter på mäklarprogrammet",
+					"img": "Mäklarbild",
 					"exhibitors": [
 						{
 							"label": "Våningen & Villan",
@@ -81,6 +85,7 @@ const data = {
 					"location": "Kölsvinet (Kårhuset)",
 					"time": "",
 					"description": "Kåren tillgododser sina medlemmar med gratis kaffe",
+					"img": "Gratis kaffe-bild",
 					"exhibitors": [
 						{
 							"label": "Kåren",
@@ -99,6 +104,7 @@ const data = {
 					"location": "NI:5",
 					"time":"10.00-14.00",
 					"description": "Studenter från kursen 'Systemutveckling och projekt' ställer ut sina projektarbeten",
+					"img": "Projektutställning-bild",
 					"exhibitors": [
 						{
 							"label": "PACA",
