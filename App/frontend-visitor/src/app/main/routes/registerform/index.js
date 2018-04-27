@@ -1,10 +1,9 @@
 import React from 'react';
+import RegisterCard from './RegisterCard';
 
 class RegisterForm extends React.Component {
 	render() {
-		return (
-			<div>registerform</div>
-		);
+		return <RegisterCard />;
 	}
 }
 
