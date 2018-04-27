@@ -90,3 +90,8 @@
 .EventCard__description {
 	padding: 30px;
 }
+
+.EventImage {
+  width: 200px;
+  display: inline;
+}
