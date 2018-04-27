@@ -1,10 +1,12 @@
 import React from 'react';
 import EventContainer from './EventContainer';
+import ImageComponent from './ImageComponent';
 
 //Component that renders DateCard with image carousel, date and event information
 class DateCard extends React.Component {
 	getImageComponent() {
-		return null;
+		let eventImg = this.props.events;
+		return eventImg;
 	}
 
 	getDate() {
@@ -25,7 +27,7 @@ class DateCard extends React.Component {
 	render() {
 		return (
 			<div className="DateCard">
-				{this.getImageComponent()}
+				<ImageComponent img={this.getImageComponent()} />
 				{this.getDate()}
 				<EventContainer events={this.getEventData()} />
 			</div>
