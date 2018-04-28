@@ -1,6 +1,6 @@
 import React from 'react';
 
-//KOMMENTAR KOMMER 
+// A form for exhibitators.  
 class RegisterCard extends React.Component {
 	render() {
 		return (
@@ -17,7 +17,24 @@ class RegisterCard extends React.Component {
                             </div>
             
                             <div className="RegisterDate">
-                                här ska vara en dropdown/ alt snyggt sätt att välja datum
+                                Välj datum nedan
+                                    <select>
+                                    <option value="Date_1">2018-04-18</option>
+                                    <option value="Date_2">2018-04-20</option>
+                                    <option value="Date_3">2018-05-24</option>
+                                </select>
+                                Det vore snyggare med en kalender eller annan lösnig här. Undersöker det!
+                            </div>
+            
+                            <div className="RegisterEvent">
+                                Välj event!
+                                <select>
+                                    <option value="Event_1">IA-dagen</option>
+                                    <option value="Event_2">Kåren informerar</option>
+                                    <option value="Event_3">Sopplunch</option>
+                                    <option value="Event_4">Mäklarmässa</option>
+                                </select>
+                                Bättre lösning kommer. Undersöker möjligheter.
                             </div>
             
                             <div className="RegisterUploadFiles">
