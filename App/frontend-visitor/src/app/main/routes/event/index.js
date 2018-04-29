@@ -12,6 +12,15 @@ class Event extends React.Component {
 		return eventId;
 	}
 
+	// Function that groups exhibitors by category.
+	getGroupedExhibitors(exhibitors) {
+    return exhibitors.reduce(function (obj, exhibitor) {
+        obj[exhibitor.label] = obj[exhibitor.label] || [];
+        obj[exhibitor.label].push(exhibitor);
+        return obj;
+    }, Object.create(null));
+	}
+
 	// Matches the URL with the right event and returns event data
 	getEventData() {
 		const eventId = this.getEventIdFromURL();
@@ -34,7 +43,7 @@ class Event extends React.Component {
 						'description': description,
 						'date': date,
 						'time': time,
-						'exhibitors': exhibitors
+						'exhibitorContainers': this.getGroupedExhibitors(exhibitors)
 					}
 					return eventData;
 				}
@@ -52,7 +61,7 @@ class Event extends React.Component {
 				description={eventData.description}
 				date={eventData.date}
 				time={eventData.time}
-				exhibitors={eventData.exhibitors}
+				exhibitorContainers={eventData.exhibitorContainers}
 			/>
 		);
 	}
