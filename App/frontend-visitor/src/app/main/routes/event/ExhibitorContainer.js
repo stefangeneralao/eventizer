@@ -10,6 +10,7 @@ class ExhibitorContainer extends React.Component {
 	render() {
 		return (
 			<div className="ExhibitorContainer">
+				<h4>{this.props.category}</h4>
         {this.printExhibitors()}
       </div>
 		);
