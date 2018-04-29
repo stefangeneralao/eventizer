@@ -14,9 +14,10 @@ class Event extends React.Component {
 
 	// Function that groups exhibitors by category.
 	getGroupedExhibitors(exhibitors) {
-    return exhibitors.reduce(function (obj, exhibitor) {
-        obj[exhibitor.label] = obj[exhibitor.label] || [];
-        obj[exhibitor.label].push(exhibitor);
+    return exhibitors.reduce((obj, exhibitor) => {
+				var key = exhibitor.category || "no-category";
+				obj[key] = obj[key] || [];
+        obj[key].push(exhibitor);
         return obj;
     }, Object.create(null));
 	}
