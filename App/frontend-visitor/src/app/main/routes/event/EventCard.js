@@ -19,6 +19,7 @@ class EventCard extends React.Component {
 		return this.props.date;
 	}
 
+	//Function that returns a list of exhhibitor containers.
 	getEventExhibitors() {
 		return Object.keys(this.props.exhibitorContainers).map((key, i) => {
 				var exhibitors = this.props.exhibitorContainers[key];
