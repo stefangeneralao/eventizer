@@ -35,7 +35,7 @@ class EventCard extends React.Component {
 		const eventExhibitors = this.getEventExhibitors();
 
 		return (
-			<div>
+			<div className="EventCard">
 				<div>
 					{eventTitle}
 				</div>

@@ -8,9 +8,9 @@ class ExhibitorMiniature extends React.Component {
 		const onClickLink = "/exhibitor/" + this.props.label;
 
 		return (
-			<div>
+			<div className="ExhibitorMiniature">
+				<p>{this.props.img}</p>
 				<p><Link to={onClickLink}>{this.props.label}</Link></p>
-				<p>{this.props.description}</p>
 			</div>
 		);
 	}
