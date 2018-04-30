@@ -17,7 +17,8 @@ create table exhibition(
   exhibitionID   serial primary key,
   eventID       serial,
   title         text,
-  description   text
+  description   text,
+  category      text
 );
 
 create table exhibitionimg(
