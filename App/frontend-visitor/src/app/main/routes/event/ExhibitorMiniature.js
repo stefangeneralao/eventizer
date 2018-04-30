@@ -1,5 +1,6 @@
 import React from 'react';
 
+//Component that display exhibitor miniatures.
 class ExhibitorMiniature extends React.Component {
 
 	render() {
