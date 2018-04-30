@@ -48,7 +48,7 @@ class RegisterCard extends React.Component {
                             
                             <div>
                                 <i>
-                                    Du kommer att få ett bekräftelsemeddelande när informationen är godkänd och publicerad.
+                                Tack! Vi har nu mottagit din anmälan.
                                 </i>
                             </div>
                     </fieldset>
