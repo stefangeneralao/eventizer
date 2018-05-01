@@ -36,20 +36,20 @@ class EventCard extends React.Component {
 
 		return (
 			<div className="EventCard">
-				<div>
+				<div className="EventCard__title">
 					{eventTitle}
 				</div>
 
-				<div>
+				<div className="EventCard__date">
+					{eventDate}
+					</div>
+
+				<div className="EventCard__description">
 					{eventDescription}
 				</div>
 
-				<div>
-					{eventTime}
-				</div>
-
-				<div>
-					{eventDate}
+				<div className="EventCard__time">
+					Kl:{eventTime}
 				</div>
 
 				<div>

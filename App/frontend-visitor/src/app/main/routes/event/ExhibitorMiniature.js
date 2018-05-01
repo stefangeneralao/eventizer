@@ -9,7 +9,7 @@ class ExhibitorMiniature extends React.Component {
 
 		return (
 			<div className="ExhibitorMiniature">
-				<p>{this.props.img}</p>
+				<p><img src="https://picsum.photos/200/200/?random" alt="test"/></p>
 				<p><Link to={onClickLink}>{this.props.label}</Link></p>
 			</div>
 		);

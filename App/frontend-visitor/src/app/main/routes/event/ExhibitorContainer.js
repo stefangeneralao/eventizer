@@ -18,7 +18,9 @@ class ExhibitorContainer extends React.Component {
 		return (
 			<div className="ExhibitorContainer">
 				{this.props.category !== 'no-category' && <h4>{this.props.category}</h4>}
-        {this.printExhibitors()}
+				<div className="ExhibitorContainer__ExhibitorGrid">
+        	{this.printExhibitors()}
+				</div>
       </div>
 		);
 	}
