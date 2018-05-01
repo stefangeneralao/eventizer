@@ -1,9 +1,8 @@
 import React from 'react';
 import Slider from "react-slick";
+import "../../../index.css"
 import "../../../../index.css";
-// import ia from '../../../../images/ia.jpg';
-//import kåren from '../../../../images/kåren.jpg';
-//import sopplunch from '../../../../images/sopplunch.jpg';
+
 
 //Component that returns images for ImageCarousel
 class ImageCarousel extends React.Component {
@@ -11,8 +10,8 @@ class ImageCarousel extends React.Component {
     return this.props.imageID.map((imgID, i) => {
 			console.log(imgID);
       return (
-        <div key={i}>
-        	<img src={require("../../../../images/" + imgID)} alt=" "/>
+        <div className="EventImageSlider" key={i}>
+        	<img src={require("../../../../images/" + imgID)} className="EventImage" alt=" "/>
         </div>
       );
     })
@@ -23,11 +22,11 @@ class ImageCarousel extends React.Component {
       dots: true,
       autoplay: true,
       fade: true,
-      speed: 200
+      speed: 200,
     };
 
     return (
-      <div className="ImageCarousel">
+      <div>
       <Slider {...settings}>
         <div>
         {this.getImageByID()}

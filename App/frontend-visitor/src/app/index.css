@@ -92,6 +92,14 @@
 }
 
 .EventImage {
-  width: 200px;
+  width: 300px;
+  display: inline;
+}
+
+.EventImageSlider {
+  display: inline;
+}
+
+.slick-slide img {
   display: inline;
 }
