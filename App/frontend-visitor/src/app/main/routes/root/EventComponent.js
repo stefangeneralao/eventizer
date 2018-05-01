@@ -27,12 +27,21 @@ class EventComponent extends React.Component {
     </div>;
   }
 
+  getLink() {
+    if (this.props.exhibitors && this.props.exhibitors.length === 1){
+      return "/exhibitor/" + this.props.exhibitors[0].label;
+    }
+    else {
+      return "/event/" + this.props.title;
+    }
+  }
+
   render () {
 		const title = this.getTitle();
     const location = this.getLocation();
     const time = this.getTime();
     const description = this.getDescription();
-    const onClickLink = "event/" + this.props.title;
+    const onClickLink = this.getLink();
 		return<div className="EventComponent__event-wrapper">
     <div>
       {location}

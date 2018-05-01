@@ -6,14 +6,14 @@ class Root extends React.Component {
 	getCardsData() {
 		let cardsData = JSON.parse(JSON.stringify(this.props.store.dates));
 
-		for(let i in cardsData) {
-			let eventsList = cardsData[i]['events'];
-
-			for(let j in eventsList) {
-				let eventItem = eventsList[j];
-				delete eventItem["exhibitors"];
-			}
-		}
+		// for(let i in cardsData) {
+		// 	let eventsList = cardsData[i]['events'];
+		//
+		// 	for(let j in eventsList) {
+		// 		let eventItem = eventsList[j];
+		// 		delete eventItem["exhibitors"];
+		// 	}
+		// }
 		return cardsData;
 	}
 

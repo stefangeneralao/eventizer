@@ -5,7 +5,13 @@ class EventContainer extends React.Component {
   getEvents() {
     const events = this.props.events.map((event, i) => {
       return (
-        <EventComponent title={event.label} description={event.description} time={event.time} location={event.location} imgID={event.imgID} key={i}/>
+        <EventComponent title={event.label}
+          description={event.description}
+          time={event.time}
+          location={event.location}
+          exhibitors={event.exhibitors}
+          imgID={event.imgID}
+          key={i} />
       )
     });
     return events;
