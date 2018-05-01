@@ -3,20 +3,8 @@ import Slider from "react-slick";
 import "../../../index.css"
 import "../../../../index.css";
 
-
-//Component that returns images for ImageCarousel
+//Component that returns images by imgID for ImageCarousel
 class ImageCarousel extends React.Component {
-  getImageByID () {
-    return this.props.imageID.map((imgID, i) => {
-			console.log(imgID);
-      return (
-        <div className="EventImageSlider" key={i}>
-        	<img src={require("../../../../images/" + imgID)} className="EventImage" alt=" "/>
-        </div>
-      );
-    })
-  }
-
   render() {
     var settings = {
       dots: true,
@@ -28,9 +16,13 @@ class ImageCarousel extends React.Component {
     return (
       <div>
       <Slider {...settings}>
-        <div>
-        {this.getImageByID()}
+        {this.props.imageID.map((imgID,i) => {
+          return (
+        <div key={i}>
+          <img src={require("../../../../images/" + imgID)} className="EventImage" alt=" "/>
         </div>
+      );
+    })}
       </Slider>
       </div>
     )

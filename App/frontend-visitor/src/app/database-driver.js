@@ -152,6 +152,21 @@ const data = {
 							"descripton": "Information om projektet PACA"
 						}
 					]
+				},
+				{
+					"label": "EF språkresor",
+					"location": "OR:0",
+					"time": "10.00-14.00",
+					"description": "EF språkresor informerar om utlandsstudier",
+					"imgID": "EF.jpg",
+					"exhibitors": [
+						{
+							"exhibitionID": "1117",
+							"label": "EF",
+							"description":"Info om EF"
+						}
+					]
+
 				}
 			]
 		}
