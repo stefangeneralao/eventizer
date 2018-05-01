@@ -18,12 +18,11 @@ class RegisterCard extends React.Component {
 
                             <div className="RegisterDate">
                                 Välj datum nedan
-                                    <select>
+                                <select>
                                     <option value="Date_1">2018-04-18</option>
                                     <option value="Date_2">2018-04-20</option>
                                     <option value="Date_3">2018-05-24</option>
                                 </select>
-                                Det vore snyggare med en kalender eller annan lösnig här. Undersöker det!
                             </div>
 
                             <div className="RegisterEvent">
@@ -34,22 +33,14 @@ class RegisterCard extends React.Component {
                                     <option value="Event_3">Sopplunch</option>
                                     <option value="Event_4">Mäklarmässa</option>
                                 </select>
-                                Bättre lösning kommer. Undersöker möjligheter.
                             </div>
 
                             <div className="RegisterUploadFiles">
-                                här ska vi ha react-dropzone istället. I will fix!
                                 <input type="file" name="upload" />
                             </div>
 
                             <div className="RegisterSubmit">
-                                <input type="button" value="Skicka!" onclick="alert('Din information är skickad!')"/>
-                            </div>
-
-                            <div>
-                                <i>
-                                Tack! Vi har nu mottagit din anmälan.
-                                </i>
+                                <input type="button" value="Skicka!" onclick="alert('Tack! Vi har nu mottagit din anmälan.')"/>
                             </div>
                     </fieldset>
                 </form>
@@ -57,5 +48,6 @@ class RegisterCard extends React.Component {
         )
 	};
 }
+
 
 export default RegisterCard;
