@@ -6,6 +6,7 @@ import ImageComponent from './ImageComponent';
 class DateCard extends React.Component {
 	getImageComponent() {
 		let eventImg = this.props.events;
+	//	console.log(this.props.events)
 		return eventImg;
 	}
 
@@ -27,7 +28,7 @@ class DateCard extends React.Component {
 	render() {
 		return (
 			<div className="DateCard">
-				<ImageComponent img={this.getImageComponent()} />
+				<ImageComponent imageID={this.getImageComponent()} />
 				{this.getDate()}
 				<EventContainer events={this.getEventData()} />
 			</div>

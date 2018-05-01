@@ -85,7 +85,7 @@ const data = {
 					"location": "Kölsvinet (Kårhuset)",
 					"time": "",
 					"description": "Kåren tillgododser sina medlemmar med gratis kaffe",
-					"imgID": "Kårenkaffe.jpg",
+					"imgID": "kårenkaffe.jpg",
 					"exhibitors": [
 						{
 							"label": "Kåren",

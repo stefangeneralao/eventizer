@@ -1,6 +1,6 @@
 import React from 'react';
 
-// A form for exhibitators.  
+// A form for exhibitators.
 class RegisterCard extends React.Component {
 	render() {
 		return (
@@ -11,11 +11,11 @@ class RegisterCard extends React.Component {
                             <div className="RegisterTitel">
                                 <input type="text" name="title" placeholder="Fyll i titel" required/>
                             </div>
-            
+
                             <div className="RegisterDescription">
                                 <input type="text" name="description" placeholder="Beskriv ditt projekt!" required/>
                             </div>
-            
+
                             <div className="RegisterDate">
                                 Välj datum nedan
                                     <select>
@@ -25,7 +25,7 @@ class RegisterCard extends React.Component {
                                 </select>
                                 Det vore snyggare med en kalender eller annan lösnig här. Undersöker det!
                             </div>
-            
+
                             <div className="RegisterEvent">
                                 Välj event!
                                 <select>
@@ -36,16 +36,16 @@ class RegisterCard extends React.Component {
                                 </select>
                                 Bättre lösning kommer. Undersöker möjligheter.
                             </div>
-            
+
                             <div className="RegisterUploadFiles">
                                 här ska vi ha react-dropzone istället. I will fix!
-                                <input type="file" name="upload" /> 
+                                <input type="file" name="upload" />
                             </div>
-            
+
                             <div className="RegisterSubmit">
                                 <input type="button" value="Skicka!" onclick="alert('Din information är skickad!')"/>
                             </div>
-                            
+
                             <div>
                                 <i>
                                 Tack! Vi har nu mottagit din anmälan.
@@ -54,7 +54,7 @@ class RegisterCard extends React.Component {
                     </fieldset>
                 </form>
             </div>
-        ) 
+        )
 	};
 }
 
