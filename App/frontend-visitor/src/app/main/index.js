@@ -18,6 +18,7 @@ class Main extends React.Component {
 		super();
 		this.getRoot = this.getRoot.bind(this);
 		this.getEvent = this.getEvent.bind(this);
+		this.getExhibitor = this.getExhibitor.bind(this);
 	}
 
 	getRoot() {
@@ -34,7 +35,7 @@ class Main extends React.Component {
 
 	getExhibitor() {
 		return (
-			<Exhibitor />
+			<Exhibitor store={this.props.store} />
 		);
 	}
 

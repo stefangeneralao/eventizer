@@ -1,10 +1,56 @@
 import React from 'react';
+import ExhibitorCard from './ExhibitorCard';
 
 class Exhibitor extends React.Component {
+	// Get ExhibitorId from browser URL
+	getExhibitorIdFromURL() {
+		let url = document.URL;
+		let parts = url.split('/')
+		return parts[parts.length - 1];
+	}
+
+	// Matches the URL with the right exhibitor and returns data
+	getExhibitorData() {
+		const exhibitorId = this.getExhibitorIdFromURL();
+		const dates = this.props.store.dates;
+
+		for(let i in dates) {
+			const eventListItem = dates[i]['events'];
+
+			for(let j in eventListItem) {
+				const exhibitors = eventListItem[j]['exhibitors'];
+
+				for (let z in exhibitors) {
+					var exhibitor = exhibitors[z];
+					const encodedExhibitorId = encodeURIComponent(exhibitorId.trim())
+					if(exhibitor.exhibitionID === encodedExhibitorId){
+						const date = dates[i]['date'];
+						const time = eventListItem[j]['time'];
+						const exhibitorData = {
+							'id': exhibitor.exhibitionID,
+							'label': exhibitor.label,
+							'description': exhibitor.description,
+							'img': exhibitor.img,
+							'date': date,
+							'time': time
+						};
+						return exhibitorData;
+					}
+				}
+			}
+		}
+		return dates;
+	}
+
 	render() {
-		return (
-			<div>exhibitor</div>
-		);
+		let exhibitorData = this.getExhibitorData();
+		return (<ExhibitorCard
+						id={exhibitorData.id}
+						label={exhibitorData.label}
+						description={exhibitorData.description}
+						img={exhibitorData.img}
+						date={exhibitorData.date}
+						time={exhibitorData.time} />);
 	}
 }
 

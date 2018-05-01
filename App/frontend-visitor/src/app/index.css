@@ -15,7 +15,7 @@
   text-align: center;
 }
 
-.DateCard, .EventCard {
+.DateCard, .EventCard, .ExhibitorCard {
 	box-shadow: 0 2px 6px #ccc;
 	max-width: 700px;
 	margin: 20px auto;
@@ -89,16 +89,16 @@
   grid-gap: 1em;
 }
 
-.EventCard__title {
+.EventCard__title, .ExhibitorCard__label {
   font-size: 1.5rem;
   margin-left: 10px;
 }
 
-.EventCard__description {
+.EventCard__description, .ExhibitorCard__description {
   margin: 10px;
 }
 
-.EventCard__time, .EventCard__date {
+.EventCard__time, .EventCard__date, .ExhibitorCard__time, .ExhibitorCard__date {
   margin-left: 10px;
   margin-top: 4px;
 }

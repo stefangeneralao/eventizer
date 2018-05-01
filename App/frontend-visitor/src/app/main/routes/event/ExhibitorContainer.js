@@ -6,6 +6,7 @@ class ExhibitorContainer extends React.Component {
 	printExhibitors() {
     return this.props.eventExhibitors.map((eventExhibitor, i) => {
         return <ExhibitorMiniature
+								id={eventExhibitor.exhibitionID}
 								image={eventExhibitor.img}
 								label={eventExhibitor.label}
 								description={eventExhibitor.description}

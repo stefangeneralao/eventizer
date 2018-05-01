@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 class ExhibitorMiniature extends React.Component {
 
 	render() {
-		const onClickLink = "/exhibitor/" + this.props.label;
+		const onClickLink = "/exhibitor/" + this.props.id;
 
 		return (
 			<div className="ExhibitorMiniature">

@@ -29,7 +29,7 @@ class EventComponent extends React.Component {
 
   getLink() {
     if (this.props.exhibitors && this.props.exhibitors.length === 1){
-      return "/exhibitor/" + this.props.exhibitors[0].label;
+      return "/exhibitor/" + this.props.exhibitors[0].exhibitionID;
     }
     else {
       return "/event/" + this.props.title;
