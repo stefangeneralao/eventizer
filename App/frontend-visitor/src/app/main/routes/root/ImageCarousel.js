@@ -24,9 +24,9 @@ class ImageCarousel extends React.Component {
       <Slider {...settings}>
         {this.props.imageID.map((imgID,i) => {
         return (
-          <Link to={onClickLink}>
+          <Link to={"event/" + imgID.eventLabel}>
             <div key={i}>
-              <img src={require("../../../../images/" + imgID)} className="EventImage" alt=" "/>
+              <img src={require("../../../../images/" + imgID.imageID)} className="EventImage" alt=" "/>
             </div>
           </Link>
       );

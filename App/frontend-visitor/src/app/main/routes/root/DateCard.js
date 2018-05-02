@@ -4,9 +4,12 @@ import ImageComponent from './ImageComponent';
 
 //Component that renders DateCard with image carousel, date and event information
 class DateCard extends React.Component {
-	getImageComponent() {
+	getEventImages() {
 		const imageIds = this.props.events.map((event, i) => {
-			return event.imgID;
+			return {
+				imageID: event.imgID,
+				eventLabel: event.label
+			};
 		});
 		return imageIds;
 	}
@@ -29,7 +32,7 @@ class DateCard extends React.Component {
 	render() {
 		return (
 			<div className="DateCard">
-				<ImageComponent imageID={this.getImageComponent()} />
+				<ImageComponent imageID={this.getEventImages()} />
 				{this.getDate()}
 				<EventContainer events={this.getEventData()} />
 			</div>
