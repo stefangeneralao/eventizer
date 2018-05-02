@@ -49,23 +49,23 @@ class RegisterCard extends React.Component {
                 <form>
                     <fieldset>
                         <h2>Fyll i information här!</h2>
-                            <fieldgroup className="RegisterTitel">
+                            <fieldGroup className="RegisterTitel">
                                 <input type="text" name="title" placeholder="Fyll i titel" required/>
-                            </fieldgroup>
+                            </fieldGroup>
 
-                            <fieldgroup className="RegisterDescription">
+                            <fieldGroup className="RegisterDescription">
                                 <input type="textarea" name="description" placeholder="Beskriv ditt projekt!" required/>
-                            </fieldgroup>
+                            </fieldGroup>
 
-                            <fieldgroup className="RegisterDate">
+                            <fieldGroup className="RegisterDate">
                                 <p>Välj datum nedan:</p>
 								{this.getDateDropDown()}
-                            </fieldgroup>
+                            </fieldGroup>
 
-                            <fieldgroup className="RegisterEvent">
+                            <fieldGroup className="RegisterEvent">
                                 <p>Välj event:</p>
                                 {this.getEventDropDown()}
-                            </fieldgroup>
+                            </fieldGroup>
 
 
                             <div className="RegisterUploadFiles">
@@ -96,7 +96,7 @@ class RegisterCard extends React.Component {
                             </div>
 
                             <div className="RegisterSubmit">
-                                <input type="button" value="Skicka!" onclick="alert('Tack! Vi har nu mottagit din registrering.')"/>
+                                <input type="button" value="Skicka!" onClick="alert('Tack! Vi har nu mottagit din registrering.')"/>
                             </div>
                     </fieldset>
                 </form>
