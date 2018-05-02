@@ -11,6 +11,7 @@ class RegisterCard extends React.Component {
     }
   }
 	render() {
+		console.log(this.props.store);
 		return (
             <div>
                 <form>
@@ -43,7 +44,7 @@ class RegisterCard extends React.Component {
                                 </select>
                             </div>
 
-            
+
                             <div className="RegisterUploadFiles">
                                 <section>
                                     <div className="dropzone">
