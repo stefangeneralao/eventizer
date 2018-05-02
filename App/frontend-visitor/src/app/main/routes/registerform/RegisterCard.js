@@ -43,6 +43,7 @@ class RegisterCard extends React.Component {
                                 </select>
                             </div>
 
+            
                             <div className="RegisterUploadFiles">
                                 <section>
                                     <div className="dropzone">
@@ -55,13 +56,13 @@ class RegisterCard extends React.Component {
                                       </Dropzone>
                                     </div>
                                     <aside>
-                                      <h2>Accepted files</h2>
+                                      <h2>Filer som laddas upp:</h2>
                                       <ul>
                                         {
                                           this.state.accepted.map(f => <li key={f.name}>{f.name} - {f.size} bytes</li>)
                                         }
                                       </ul>
-                                      <h2>Rejected files</h2>
+                                      <h2>Filer som inte kommer att laddas upp:</h2>
                                       <ul>
                                         {
                                           this.state.rejected.map(f => <li key={f.name}>{f.name} - {f.size} bytes</li>)
