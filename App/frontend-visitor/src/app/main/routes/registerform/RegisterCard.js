@@ -1,7 +1,15 @@
 import React from 'react';
+import Dropzone from 'react-dropzone'
 
 // A form for exhibitators.
 class RegisterCard extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      accepted: [],
+      rejected: []
+    }
+  }
 	render() {
 		return (
             <div>
@@ -36,7 +44,31 @@ class RegisterCard extends React.Component {
                             </div>
 
                             <div className="RegisterUploadFiles">
-                                <input type="file" name="upload" />
+                                <section>
+                                    <div className="dropzone">
+                                      <Dropzone
+                                        accept="image/jpeg, image/png"
+                                        onDrop={(accepted, rejected) => { this.setState({ accepted, rejected }); }}
+                                      >
+                                        <p>Klicka här för att ladda upp bilder!</p>
+                                        <p>Endast bilder i formatet *.jpeg och *.png accepteras. </p>
+                                      </Dropzone>
+                                    </div>
+                                    <aside>
+                                      <h2>Accepted files</h2>
+                                      <ul>
+                                        {
+                                          this.state.accepted.map(f => <li key={f.name}>{f.name} - {f.size} bytes</li>)
+                                        }
+                                      </ul>
+                                      <h2>Rejected files</h2>
+                                      <ul>
+                                        {
+                                          this.state.rejected.map(f => <li key={f.name}>{f.name} - {f.size} bytes</li>)
+                                        }
+                                      </ul>
+                                    </aside>
+                                </section>
                             </div>
 
                             <div className="RegisterSubmit">

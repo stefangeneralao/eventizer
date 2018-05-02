@@ -54,6 +54,7 @@
 	display: inline-block;
 	width: 100px;
 	padding-left: 30px;
+
 }
 
 .EventComponent__event-label {
@@ -111,4 +112,60 @@
 .EventCard__time, .EventCard__date, .ExhibitorCard__time, .ExhibitorCard__date {
   margin-left: 10px;
   margin-top: 4px;
+}
+
+@media screen and (max-width:480px) {
+.EventComponent__event-label {
+  text-align: center;
+  color: green;
+
+
+ }
+
+.EventComponent__event-label:hover {
+ 	color: #0645AD;
+ 	text-decoration: underline;
+
+}
+
+ .EventComponent__event-time {
+   padding-left: 18.5%;
+   display: none;
+}
+
+ .EventComponent__event-description {
+   padding-left: 18.5%;
+   margin-bottom: 20px;
+   display: none;
+}
+.EventComponent__event-location {
+	display: none;
+	width: 100px;
+	padding-left: 30px;
+
+}
+
+}
+
+@media screen and (max-width:768px) {
+.EventComponent__event-label {
+  display: inline;
+
+
+}
+
+.EventComponent__event-label:hover {
+ 	color: #0645AD;
+  text-decoration: underline;
+}
+
+.EventComponent__event-time {
+  padding-left: 18.5%;
+}
+
+.EventComponent__event-description {
+  padding-left: 18.5%;
+  margin-bottom: 20px;
+}
+
 }
