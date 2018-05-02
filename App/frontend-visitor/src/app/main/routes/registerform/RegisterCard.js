@@ -10,8 +10,23 @@ class RegisterCard extends React.Component {
       rejected: []
     }
   }
+
+	getDateDropDown() {
+		const dateDropDownOptions = this.props.store.dates.map((date, i) => {
+			console.log(date.date);
+			return (
+				<option key={i} value={"Date_" + i}>{date.date}</option>
+			);
+		});
+
+		return(
+			<select>
+				{dateDropDownOptions}
+			</select>
+		);
+	}
+
 	render() {
-		console.log(this.props.store);
 		return (
             <div>
                 <form>
@@ -27,11 +42,7 @@ class RegisterCard extends React.Component {
 
                             <fieldgroup className="RegisterDate">
                                 <p>Välj datum nedan:</p>
-                                <select>
-                                    <option value="Date_1">2018-04-18</option>
-                                    <option value="Date_2">2018-04-20</option>
-                                    <option value="Date_3">2018-05-24</option>
-                                </select>
+																{this.getDateDropDown()}
                             </fieldgroup>
 
                             <fieldgroup className="RegisterEvent">
