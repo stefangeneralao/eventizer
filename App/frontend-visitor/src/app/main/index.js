@@ -41,7 +41,7 @@ class Main extends React.Component {
 
 	getRegisterForm() {
 		return (
-			<RegisterForm />
+			<RegisterForm store={this.props.store}/>
 		);
 	}
 
