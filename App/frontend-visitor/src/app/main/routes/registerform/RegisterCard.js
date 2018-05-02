@@ -21,11 +21,11 @@ class RegisterCard extends React.Component {
                             </div>
 
                             <div className="RegisterDescription">
-                                <input type="text" name="description" placeholder="Beskriv ditt projekt!" required/>
+                                <input type="textarea" name="description" placeholder="Beskriv ditt projekt!" required/>
                             </div>
 
                             <div className="RegisterDate">
-                                Välj datum nedan
+                                <p>Välj datum nedan:</p>
                                 <select>
                                     <option value="Date_1">2018-04-18</option>
                                     <option value="Date_2">2018-04-20</option>
@@ -34,7 +34,7 @@ class RegisterCard extends React.Component {
                             </div>
 
                             <div className="RegisterEvent">
-                                Välj event!
+                                <p>Välj event:</p>
                                 <select>
                                     <option value="Event_1">IA-dagen</option>
                                     <option value="Event_2">Kåren informerar</option>
@@ -49,8 +49,7 @@ class RegisterCard extends React.Component {
                                     <div className="dropzone">
                                       <Dropzone
                                         accept="image/jpeg, image/png"
-                                        onDrop={(accepted, rejected) => { this.setState({ accepted, rejected }); }}
-                                      >
+                                        onDrop={(accepted, rejected) => { this.setState({ accepted, rejected }); }}>
                                         <p>Klicka här för att ladda upp bilder!</p>
                                         <p>Endast bilder i formatet *.jpeg och *.png accepteras. </p>
                                       </Dropzone>
