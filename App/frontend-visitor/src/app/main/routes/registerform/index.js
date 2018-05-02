@@ -3,8 +3,8 @@ import RegisterCard from './RegisterCard';
 
 class RegisterForm extends React.Component {
 	render() {
-		return <RegisterCard />;
-        
+		return <RegisterCard store={this.props.store}/>;
+
         }
     }
 

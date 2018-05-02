@@ -149,7 +149,7 @@ const data = {
 						{
 							"exhibitionID": "1116",
 							"label": "Fairytale Flavours",
-							"descripton": "Information om projektet PACA"
+							"description": "Här kommer mer information om utställningen Fairytale Flavours presenteras inför utställningsdagen."
 						}
 					]
 				},

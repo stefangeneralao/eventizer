@@ -19,6 +19,7 @@ class Main extends React.Component {
 		this.getRoot = this.getRoot.bind(this);
 		this.getEvent = this.getEvent.bind(this);
 		this.getExhibitor = this.getExhibitor.bind(this);
+		this.getRegisterForm = this.getRegisterForm.bind(this);
 	}
 
 	getRoot() {
@@ -41,7 +42,7 @@ class Main extends React.Component {
 
 	getRegisterForm() {
 		return (
-			<RegisterForm />
+			<RegisterForm store={this.props.store}/>
 		);
 	}
 

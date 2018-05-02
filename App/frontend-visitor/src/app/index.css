@@ -15,13 +15,22 @@
   text-align: center;
 }
 
-.DateCard, .EventCard, .ExhibitorCard {
+.DateCard, .ExhibitorCard {
 	box-shadow: 0 2px 6px #ccc;
 	max-width: 700px;
 	margin: 20px auto;
 	padding: 10px;
 	border-radius: 2px;
 	transition: 100ms;
+}
+
+.EventCard {
+  box-shadow: 0 2px 6px #ccc;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 2px;
+  transition: 100ms;
 }
 
 .DateCard:hover, .EventCard:hover {
@@ -45,7 +54,6 @@
 	display: inline-block;
 	width: 100px;
 	padding-left: 30px;
-
 }
 
 .EventComponent__event-label {
