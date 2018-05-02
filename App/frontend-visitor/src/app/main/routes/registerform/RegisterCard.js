@@ -16,25 +16,25 @@ class RegisterCard extends React.Component {
             <div>
                 <form>
                     <fieldset>
-                        <legend>Fyll i information här!</legend>
-                            <div className="RegisterTitel">
+                        <h2>Fyll i information här!</h2>
+                            <fieldgroup className="RegisterTitel">
                                 <input type="text" name="title" placeholder="Fyll i titel" required/>
-                            </div>
+                            </fieldgroup>
 
-                            <div className="RegisterDescription">
+                            <fieldgroup className="RegisterDescription">
                                 <input type="textarea" name="description" placeholder="Beskriv ditt projekt!" required/>
-                            </div>
+                            </fieldgroup>
 
-                            <div className="RegisterDate">
+                            <fieldgroup className="RegisterDate">
                                 <p>Välj datum nedan:</p>
                                 <select>
                                     <option value="Date_1">2018-04-18</option>
                                     <option value="Date_2">2018-04-20</option>
                                     <option value="Date_3">2018-05-24</option>
                                 </select>
-                            </div>
+                            </fieldgroup>
 
-                            <div className="RegisterEvent">
+                            <fieldgroup className="RegisterEvent">
                                 <p>Välj event:</p>
                                 <select>
                                     <option value="Event_1">IA-dagen</option>
@@ -42,7 +42,7 @@ class RegisterCard extends React.Component {
                                     <option value="Event_3">Sopplunch</option>
                                     <option value="Event_4">Mäklarmässa</option>
                                 </select>
-                            </div>
+                            </fieldgroup>
 
 
                             <div className="RegisterUploadFiles">
@@ -56,13 +56,13 @@ class RegisterCard extends React.Component {
                                       </Dropzone>
                                     </div>
                                     <aside>
-                                      <h2>Filer som laddas upp:</h2>
+                                      <h3>Filer som laddas upp:</h3>
                                       <ul>
                                         {
                                           this.state.accepted.map(f => <li key={f.name}>{f.name} - {f.size} bytes</li>)
                                         }
                                       </ul>
-                                      <h2>Filer som inte kommer att laddas upp:</h2>
+                                      <h3>Filer som inte kommer att laddas upp:</h3>
                                       <ul>
                                         {
                                           this.state.rejected.map(f => <li key={f.name}>{f.name} - {f.size} bytes</li>)
@@ -73,7 +73,7 @@ class RegisterCard extends React.Component {
                             </div>
 
                             <div className="RegisterSubmit">
-                                <input type="button" value="Skicka!" onclick="alert('Tack! Vi har nu mottagit din anmälan.')"/>
+                                <input type="button" value="Skicka!" onclick="alert('Tack! Vi har nu mottagit din registrering.')"/>
                             </div>
                     </fieldset>
                 </form>
