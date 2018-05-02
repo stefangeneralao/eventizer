@@ -53,7 +53,6 @@ class RegisterCard extends React.Component {
 		});
 
 		return (
-<<<<<<< HEAD
 			<select name="event">
 				{eventDropDownOptions}
 			</select>
@@ -77,29 +76,6 @@ class RegisterCard extends React.Component {
 						<p>Välj datum nedan:</p>
 						{this.getDateDropDown()}
 					</fieldgroup>
-=======
-            <div>
-                <form>
-                    <fieldset>
-                        <h2>Fyll i information här!</h2>
-                            <fieldGroup className="RegisterTitel">
-                                <input type="text" name="title" placeholder="Fyll i titel" required/>
-                            </fieldGroup>
-
-                            <fieldGroup className="RegisterDescription">
-                                <input type="textarea" name="description" placeholder="Beskriv ditt projekt!" required/>
-                            </fieldGroup>
-
-                            <fieldGroup className="RegisterDate">
-                                <p>Välj datum nedan:</p>
-								{this.getDateDropDown()}
-                            </fieldGroup>
-
-                            <fieldGroup className="RegisterEvent">
-                                <p>Välj event:</p>
-                                {this.getEventDropDown()}
-                            </fieldGroup>
->>>>>>> 9e5da2e292aa32c00d9e9e81193424d280068388
 
 					<fieldgroup className="RegisterEvent">
 						<p>Välj event:</p>
@@ -138,22 +114,12 @@ class RegisterCard extends React.Component {
 						</section>
 					</div>
 
-<<<<<<< HEAD
 					<div className="RegisterSubmit">
 						<input type="submit" value="Skicka!" />
 					</div>
 				</fieldset>
 			</form>
 		</div>)
-=======
-                            <div className="RegisterSubmit">
-                                <input type="button" value="Skicka!" onClick="alert('Tack! Vi har nu mottagit din registrering.')"/>
-                            </div>
-                    </fieldset>
-                </form>
-            </div>
-        )
->>>>>>> 9e5da2e292aa32c00d9e9e81193424d280068388
 	};
 }
 
