@@ -10,8 +10,8 @@ class ImageCarousel extends React.Component {
     return<div>{this.props.title}</div>;
   }
   render() {
-    const onClickLink = "event/" + this.props.title;
-    console.log()
+    const onClickLink = this.getLink();
+    console.log(this.props.title)
     var settings = {
       dots: true,
       autoplay: true,
@@ -28,7 +28,7 @@ class ImageCarousel extends React.Component {
             <div key={i}>
               <img src={require("../../../../images/" + imgID)} className="EventImage" alt=" "/>
             </div>
-          </Link>
+            </Link>
       );
     })}
       </Slider>
