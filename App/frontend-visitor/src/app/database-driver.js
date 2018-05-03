@@ -119,37 +119,37 @@ const data = {
 						{
 							"exhibitionID": "1010",
 							"label": "PACA",
-							"descripton": "Information om projektet PACA"
+							"description": "Information om projektet PACA"
 						},
 						{
 							"exhibitionID": "1011",
 							"label": "Politweet",
-							"descripton": "Information om projektet Politweet"
+							"description": "Information om projektet Politweet"
 						},
 						{
 							"exhibitionID": "1112",
 							"label": "YourGeo",
-							"descripton": "Information om projektet YourGeo"
+							"description": "Information om projektet YourGeo"
 						},
 						{
 							"exhibitionID": "1113",
 							"label": "PACA 2",
-							"descripton": "Information om projektet PACA 2"
+							"description": "Information om projektet PACA 2"
 						},
 						{
 							"exhibitionID": "1114",
 							"label": "CleanUp",
-							"descripton": "Information om projektet CleanUp"
+							"description": "Information om projektet CleanUp"
 						},
 						{
 							"exhibitionID": "1115",
 							"label": "Förspelet",
-							"descripton": "Information om projektet Förspelet"
+							"description": "Information om projektet Förspelet"
 						},
 						{
 							"exhibitionID": "1116",
 							"label": "Fairytale Flavours",
-							"description": "Här kommer mer information om utställningen Fairytale Flavours presenteras inför utställningsdagen."
+							"description": "Här kommer mer information om projektet Fairytale Flavours finnas inför utställningsdagen."
 						}
 					]
 				},
