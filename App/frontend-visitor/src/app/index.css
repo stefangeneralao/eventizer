@@ -55,14 +55,49 @@
 	padding: 3px 0;
 }
 
+.EventContainer {
+	padding-top: 50px;
+}
+
+.hidden {
+	display: none;
+}
+
+.EventComponent {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: 30px;
+	margin-right: 30px;
+	display: grid;
+	grid-template-columns: 3fr 1fr 30px;
+	grid-template-rows: auto auto auto;
+	grid-template-areas:
+		'label location moreBtn'
+		'time time time'
+		'description description description';
+}
+
 .EventComponent__event-location {
-	display: inline-block;
+	grid-area: location;
+	text-align: right;
 	width: 100px;
 	padding-left: 30px;
 }
 
 .EventComponent__event-label {
+	grid-area: label;
 	display: inline;
+}
+
+.EventComponent__moreBtn.open {
+	grid-area: moreBtn;
+	transform: rotate(180deg);
+	transition: 150ms;
+}
+
+.EventComponent__moreBtn.closed {
+	grid-area: moreBtn;
+	transition: 150ms;
 }
 
 .EventComponent__event-label:hover {
@@ -71,10 +106,13 @@
 }
 
 .EventComponent__event-time {
+	grid-area: time;
+	text-align: right;
   padding-left: 18.5%;
 }
 
 .EventComponent__event-description {
+	grid-area: description;
   padding-left: 18.5%;
   margin-bottom: 20px;
 }
