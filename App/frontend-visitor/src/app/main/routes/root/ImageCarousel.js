@@ -7,11 +7,9 @@ import "../../../../index.css";
 //Component that returns images by imgID for ImageCarousel
 class ImageCarousel extends React.Component {
   getLink() {
-    return<div>{this.props.title}</div>;
+    return<div>{this.props.eventLabel}</div>;
   }
   render() {
-    const onClickLink = this.getLink();
-    console.log(this.props.title)
     var settings = {
       dots: true,
       autoplay: true,
@@ -24,13 +22,13 @@ class ImageCarousel extends React.Component {
       <Slider {...settings}>
         {this.props.imageID.map((imgID,i) => {
         return (
-          <Link to={"event/" + imgID.eventLabel}>
-            <div key={i}>
+          <div key={i}>
+            <Link to={"event/" + imgID.eventLabel}>
               <img src={require("../../../../images/" + imgID.imageID)} className="EventImage" alt=" "/>
-            </div>
             </Link>
-      );
-    })}
+          </div>
+          );
+        })}
       </Slider>
       </div>
     )
