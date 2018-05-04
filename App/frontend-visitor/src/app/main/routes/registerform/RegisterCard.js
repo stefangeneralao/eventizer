@@ -22,15 +22,22 @@ class RegisterCard extends React.Component {
 
 	getDateDropDown() {
 		const dateDropDownOptions = this.props.store.dates.map((date, i) => {
-			return (<option key={i} value={date.date}>{date.date}</option>);
+			return (
+                <option
+                key={i}
+                value={date.date}>
+                {date.date}
+                </option>);
 		});
 
 		return (
 			<select
 				name="date"
 				onChange={(e) => {this.dateDropDownChangeHandler(e)}}
-				ref="dateDropDown"
-			>
+				ref="dateDropDown">
+                <option>
+                Välj datum...
+                </option>
 				{dateDropDownOptions}
 			</select>
 		);
@@ -53,8 +60,13 @@ class RegisterCard extends React.Component {
 		});
 
 		return (
-			<select name="event">
+			<select 
+                name="event">
+                <option>
+                Välj event...
+                </option>
 				{eventDropDownOptions}
+                required={this.props.required}
 			</select>
 		);
 	}
@@ -88,13 +100,14 @@ class RegisterCard extends React.Component {
 								<Dropzone accept="image/jpeg, image/png" onDrop={(accepted, rejected) => {
 										this.setState({accepted, rejected});
 									}}>
-									<p>Klicka här för att ladda upp bilder!</p>
+									<p>Klicka här för att ladda upp bilder!
+                                    </p>
 									<p>Endast bilder i formatet *.jpeg och *.png accepteras.
 									</p>
 								</Dropzone>
 							</div>
 							<aside>
-								<h3>Filer som laddas upp:</h3>
+								<h4>Filer som laddas upp:</h4>
 								<ul>
 									{
 										this.state.accepted.map(f => <li key={f.name}>{f.name}
@@ -102,7 +115,7 @@ class RegisterCard extends React.Component {
 											bytes</li>)
 									}
 								</ul>
-								<h3>Filer som inte kommer att laddas upp:</h3>
+								<h4>Filer som inte kommer att laddas upp:</h4>
 								<ul>
 									{
 										this.state.rejected.map(f => <li key={f.name}>{f.name}
