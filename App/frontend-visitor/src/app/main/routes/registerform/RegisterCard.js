@@ -94,7 +94,7 @@ class RegisterCard extends React.Component {
 					<div className="RegisterUploadFiles">
 						<section>
 							<div className="dropzone">
-								<Dropzone accept="image/jpeg, image/png" required onDrop={(accepted, rejected) => {
+								<Dropzone accept="image/jpeg, image/png" onDrop={(accepted, rejected) => {
 										this.setState({accepted, rejected});
 									}}>
 									<p>Klicka här för att ladda upp bilder!
