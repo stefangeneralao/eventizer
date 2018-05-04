@@ -34,9 +34,8 @@ class RegisterCard extends React.Component {
 			<select
 				name="date"
 				onChange={(e) => {this.dateDropDownChangeHandler(e)}}
-				ref="dateDropDown">
-                <option>
-                Välj datum...
+				ref="dateDropDown" required>
+                <option value="">
                 </option>
 				{dateDropDownOptions}
 			</select>
@@ -61,12 +60,10 @@ class RegisterCard extends React.Component {
 
 		return (
 			<select 
-                name="event">
-                <option>
-                Välj event...
+                name="event" required>
+                <option value="">
                 </option>
 				{eventDropDownOptions}
-                required={this.props.required}
 			</select>
 		);
 	}
@@ -97,7 +94,7 @@ class RegisterCard extends React.Component {
 					<div className="RegisterUploadFiles">
 						<section>
 							<div className="dropzone">
-								<Dropzone accept="image/jpeg, image/png" onDrop={(accepted, rejected) => {
+								<Dropzone accept="image/jpeg, image/png" required onDrop={(accepted, rejected) => {
 										this.setState({accepted, rejected});
 									}}>
 									<p>Klicka här för att ladda upp bilder!
