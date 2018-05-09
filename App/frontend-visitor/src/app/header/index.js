@@ -9,10 +9,8 @@ class Header extends React.Component {
 		this.state = {descriptionOpen: false};
 	}
 
-
   onHomeBtnClick() {
     this.props.history.push("/");
-
   }
 
   getHomeBtn() {
@@ -24,7 +22,12 @@ class Header extends React.Component {
     }
 
     return (
-        <img src={home} alt="home" className={className} onClick={() => {this.onHomeBtnClick()}}/>
+        <img
+          src={home}
+          alt="home"
+          className={className}
+          onClick={() => {this.onHomeBtnClick()}}
+        />
     );
   }
 
@@ -32,7 +35,11 @@ class Header extends React.Component {
     return(
       <header className="App-header">
         {this.getHomeBtn()}
-        <h1 className="App-title"><a href="/">Eventizer</a></h1>
+        <h1 className="App-title">
+          <a href="/">
+            Eventizer
+          </a>
+        </h1>
       </header>
     );
   }
