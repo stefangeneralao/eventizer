@@ -16,6 +16,7 @@
     "react-scripts": "1.1.1",
     "react-slick": "^0.23.1",
     "react-test-renderer": "^16.3.2",
+    "react-validation": "^3.0.7",
     "save": "^2.3.2",
     "slick-carousel": "^1.8.1"
   },
