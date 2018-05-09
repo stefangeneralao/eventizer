@@ -8,7 +8,14 @@ class RegisterCard extends React.Component {
 		this.state = {
 			accepted: [],
 			rejected: [],
-			selectedDate: null
+			selectedDate: null,
+            titleField: "",
+            descField: "",
+            date: null,
+            event:null,
+            dropzone: null,
+            
+            
 		}
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
@@ -70,8 +77,14 @@ class RegisterCard extends React.Component {
 	}
 
 	handleSubmit(event) {
+        // IF-funktion för om ingen fil är bifogad.
+        
 		event.preventDefault();
-		console.log(event.target.title);
+		console.log(event.target.titleField.value);
+        console.log(event.target.descField.value);
+        console.log(event.target.date.value);
+        console.log(event.target.event.value);
+        
 		// action="http://localhost:3001/exhibitor_form_request"
 	}
 
@@ -82,11 +95,19 @@ class RegisterCard extends React.Component {
 				<fieldset>
 					<h2>Fyll i information här!</h2>
 					<fieldgroup className="RegisterTitel">
-						<input type="text" name="title" placeholder="Fyll i titel" required="required"/>
+						<input type="text" name="titleField" placeholder="Fyll i titel" required="required" onChange={ event => {
+                            this.setState({
+                                "titleField": event.target.value
+                            })
+                        }}/>
 					</fieldgroup>
 
 					<fieldgroup className="RegisterDescription">
-						<input type="textarea" name="description" placeholder="Beskriv ditt projekt!" required="required"/>
+						<input type="textarea" name="descField" placeholder="Beskriv ditt projekt!" required="required" onChange={ event => {
+                            this.setState({
+                                "descField": event.target.value
+                            })
+                        }}/>
 					</fieldgroup>
 
 					<fieldgroup className="RegisterDate">
@@ -102,9 +123,11 @@ class RegisterCard extends React.Component {
 					<div className="RegisterUploadFiles">
 						<section>
 							<div className="dropzone">
-								<Dropzone accept="image/jpeg, image/png" onDrop={(accepted, rejected) => {
-										this.setState({accepted, rejected});
-									}}>
+								<Dropzone name="dropzone" accept="image/jpeg, image/png" onDrop={(accepted, rejected) => {
+										this.setState({accepted, rejected})
+									
+                                    }}>
+                                        
 									<p>Klicka här för att ladda upp bilder!
                                     </p>
 									<p>Endast bilder i formatet *.jpeg och *.png accepteras.
