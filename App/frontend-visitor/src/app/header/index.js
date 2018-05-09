@@ -2,6 +2,7 @@ import React from 'react';
 import home from './icons/home.svg';
 import { withRouter } from "react-router-dom";
 
+// Header component
 class Header extends React.Component {
   constructor() {
 		super();
