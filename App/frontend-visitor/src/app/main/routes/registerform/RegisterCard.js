@@ -10,6 +10,7 @@ class RegisterCard extends React.Component {
 			rejected: [],
 			selectedDate: null
 		}
+		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
 	dateDropDownChangeHandler(event) {
@@ -59,9 +60,16 @@ class RegisterCard extends React.Component {
 		);
 	}
 
+	handleSubmit(event) {
+		event.preventDefault();
+		console.log(event.target.title);
+		// action="http://localhost:3001/exhibitor_form_request"
+	}
+
 	render() {
-		return (<div>
-			<form action="http://localhost:3001/exhibitor_form_request" method="GET">
+		console.log(this.state);
+		return (
+			<form onSubmit={this.handleSubmit}>
 				<fieldset>
 					<h2>Fyll i information här!</h2>
 					<fieldgroup className="RegisterTitel">
@@ -119,7 +127,7 @@ class RegisterCard extends React.Component {
 					</div>
 				</fieldset>
 			</form>
-		</div>)
+		)
 	};
 }
 
