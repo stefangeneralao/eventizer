@@ -1,24 +1,24 @@
 import React from 'react';
-import Dropzone from 'react-dropzone'
 
 // A form for exhibitators.
 class RegisterCard extends React.Component {
 	constructor() {
 		super()
 		this.state = {
-			accepted: [],
-			rejected: [],
+			//accepted: [],
+			//rejected: [],
 			selectedDate: null,
             titleField: "",
             descField: "",
             date: null,
-            event:null,
-            dropzone: null,
-            
+            event: null,
+            selectedFile: null
             
 		}
+        
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
+    
 
 	dateDropDownChangeHandler(event) {
 		this.setState({selectedDate: event.target.value});
@@ -77,7 +77,7 @@ class RegisterCard extends React.Component {
 	}
 
 	handleSubmit(event) {
-        // IF-funktion för om ingen fil är bifogad.
+        
         
 		event.preventDefault();
 		console.log(event.target.titleField.value);
@@ -85,15 +85,23 @@ class RegisterCard extends React.Component {
         console.log(event.target.date.value);
         console.log(event.target.event.value);
         
-		// action="http://localhost:3001/exhibitor_form_request"
+		//method="POST"
+        //action="http://localhost:3001/exhibitor_form_request"
 	}
-
+    
+    fileSelectedHandler = event => {
+        this.setState({
+            selectedFile: event.target.files[0]
+        })
+    }
+    
 	render() {
 		console.log(this.state);
 		return (
 			<form onSubmit={this.handleSubmit}>
-				<fieldset>
+				<div className= "FormWrapper">
 					<h2>Fyll i information här!</h2>
+            
 					<fieldgroup className="RegisterTitel">
 						<input type="text" name="titleField" placeholder="Fyll i titel" required="required" onChange={ event => {
                             this.setState({
@@ -111,21 +119,26 @@ class RegisterCard extends React.Component {
 					</fieldgroup>
 
 					<fieldgroup className="RegisterDate">
-						<p>Välj datum nedan:</p>
+						<p>Välj datum nedan:
+                        </p>
 						{this.getDateDropDown()}
 					</fieldgroup>
 
 					<fieldgroup className="RegisterEvent">
-						<p>Välj event:</p>
+						<p>Välj event:
+                        </p>
 						{this.getEventDropDown()}
 					</fieldgroup>
 
 					<div className="RegisterUploadFiles">
 						<section>
-							<div className="dropzone">
+                            <input type="file" name="fileUpload" required="required" onChange={this.fileSelectedHandler}/> 
+                        </section>
+                    </div>
+                        {/*
+                        <div className="dropzone">
 								<Dropzone name="dropzone" accept="image/jpeg, image/png" onDrop={(accepted, rejected) => {
-										this.setState({accepted, rejected})
-									
+				                    this.setState({accepted, rejected})
                                     }}>
                                         
 									<p>Klicka här för att ladda upp bilder!
@@ -133,32 +146,34 @@ class RegisterCard extends React.Component {
 									<p>Endast bilder i formatet *.jpeg och *.png accepteras.
 									</p>
 								</Dropzone>
-							</div>
+                        </div>
 							<aside>
 								<h4>Filer som laddas upp:</h4>
-								<ul>
+								    <ul>
 									{
 										this.state.accepted.map(f => <li key={f.name}>{f.name}
 											- {f.size}
-											bytes</li>)
+								        bytes</li>)
 									}
-								</ul>
+								    </ul>
 								<h4>Filer som inte kommer att laddas upp:</h4>
-								<ul>
+								    <ul>
 									{
 										this.state.rejected.map(f => <li key={f.name}>{f.name}
 											- {f.size}
 											bytes</li>)
 									}
-								</ul>
+								    </ul>
 							</aside>
-						</section>
-					</div>
+						  </section>
+                        
+					   </div>
+                       */}
 
-					<div className="RegisterSubmit">
+                    <div className="RegisterSubmit">
 						<input type="submit" value="Skicka!" />
 					</div>
-				</fieldset>
+                </div>
 			</form>
 		)
 	};
