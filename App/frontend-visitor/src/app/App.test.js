@@ -4,7 +4,7 @@ import { shallow } from 'enzyme';
 import App from './index.js';
 
 xit('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+	const div = document.createElement('div');
+	ReactDOM.render(<App />, div);
+	ReactDOM.unmountComponentAtNode(div);
 });

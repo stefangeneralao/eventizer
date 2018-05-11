@@ -4,45 +4,38 @@ import { withRouter } from "react-router-dom";
 
 // Header component
 class Header extends React.Component {
-  constructor() {
-		super();
-
-		this.state = {descriptionOpen: false};
+	// Handler function for home button
+	onHomeBtnClick() {
+		this.props.history.push("/");
 	}
-  
-  // Handler function for home button
-  onHomeBtnClick() {
-    this.props.history.push("/");
-  }
-  // Creates home button
-  getHomeBtn() {
-    let className = 'HomeBtn';
-    if(this.props.location.pathname === "/") {
-      className = className + ' closed';
-    } else {
-      className = className + ' open';
-    }
 
-    return (
-      <img
-        src={home}
-        alt="home"
-        className={className}
-        onClick={() => {this.onHomeBtnClick()}}
-      />
-    );
-  }
+	// Creates home button
+	getHomeBtn() {
+		let className = 'HomeBtn';
+		if(this.props.location.pathname === "/") {
+			className = className + ' closed';
+		} else {
+			className = className + ' open';
+		}
 
-  render() {
-    return(
-      <header className="App-header">
-        {this.getHomeBtn()}
-        <h1 className="App-title">
-          <a href="/">
-            Eventizer
-          </a>
-        </h1>
-      </header>
+		return (
+			<img
+				src={home}
+				alt="home"
+				className={className}
+				onClick={() => {this.onHomeBtnClick()}}
+			/>
+		);
+	}
+
+	render() {
+		return(
+			<header className="App-header">
+				{this.getHomeBtn()}
+				<h1 className="App-title">
+					<a href="/">Eventizer</a>
+				</h1>
+			</header>
     );
   }
 }
