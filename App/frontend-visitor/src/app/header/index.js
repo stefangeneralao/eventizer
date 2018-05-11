@@ -16,19 +16,19 @@ class Header extends React.Component {
 
   getHomeBtn() {
     let className = 'HomeBtn';
-    if(this.state.descriptionOpen === true) {
-      className = className + ' open';
-    } else {
+    if(this.props.location.pathname === "/") {
       className = className + ' closed';
+    } else {
+      className = className + ' open';
     }
 
     return (
-        <img
-          src={home}
-          alt="home"
-          className={className}
-          onClick={() => {this.onHomeBtnClick()}}
-        />
+      <img
+        src={home}
+        alt="home"
+        className={className}
+        onClick={() => {this.onHomeBtnClick()}}
+      />
     );
   }
 
