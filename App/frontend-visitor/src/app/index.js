@@ -6,12 +6,8 @@ import Footer from './footer';
 import Header from './header';
 import store from './database-driver';
 import axios from 'axios';
+import BreadCrumb from './breadcrumb'
 
-const BreadCrumb = () => {
-	return (
-		<div>breadcrumb</div>
-	);
-}
 // Application root component.
 class App extends React.Component {
 	constructor() {
