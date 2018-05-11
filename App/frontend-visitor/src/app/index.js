@@ -4,8 +4,8 @@ import './index.css';
 import Main from './main';
 import Footer from './footer';
 import Header from './header';
-import store from './database-driver';
-import axios from 'axios';
+import Store from './database-driver';
+import Axios from 'axios';
 import BreadCrumb from './breadcrumb'
 
 // Application root component.
@@ -33,7 +33,7 @@ class App extends React.Component {
 		return (
 			<div className="App">
 				<Header />
-				<BreadCrumb />
+				{/*}<BreadCrumb />*/}
 				<Main store={this.state.store} />
         <Footer />
 			</div>
