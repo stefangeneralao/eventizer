@@ -4,8 +4,8 @@ import './index.css';
 import Main from './main';
 import Footer from './footer';
 import Header from './header';
-import Store from './database-driver';
-import Axios from 'axios';
+import store from './database-driver';
+import axios from 'axios';
 import BreadCrumb from './breadcrumb'
 
 // Application root component.
