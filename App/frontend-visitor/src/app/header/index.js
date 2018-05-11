@@ -9,11 +9,12 @@ class Header extends React.Component {
 
 		this.state = {descriptionOpen: false};
 	}
-
+  
+  // Handler function for home button
   onHomeBtnClick() {
     this.props.history.push("/");
   }
-
+  // Creates home button
   getHomeBtn() {
     let className = 'HomeBtn';
     if(this.state.descriptionOpen === true) {
