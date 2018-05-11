@@ -15,10 +15,14 @@
   text-decoration: none;
 }
 
-.HomeBtn {
+.HomeBtn.open {
   float: left;
   filter: invert(1);
   width: 100px;
+}
+
+.HomeBtn.closed {
+	display: none;
 }
 
 .App-footer {
