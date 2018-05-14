@@ -73,31 +73,31 @@ class RegisterCard extends React.Component {
 
 
 	handleSubmit(event){
-        {/* When the information is sent to the server ("http://localhost:3001/exhibitor_form_request") it contains fd (formdata), an object which contains all of the information in the form. Config enables that the exhibitor can upload files (img:s) and then logs "It worked"*/}
-         
+        /* When the information is sent to the server ("http://localhost:3001/exhibitor_form_request") it contains fd (formdata), an object which contains all of the information in the form. Config enables that the exhibitor can upload files (img:s) and then logs "It worked"*/
+
 		event.preventDefault();
 		console.log(event.target.titleField.value);
         console.log(event.target.descField.value);
         console.log(event.target.date.value);
         console.log(event.target.event.value);
         console.log(event.target.fileUpload.files[0]);
-        
+
         var fd = new FormData();
         fd.append("title", event.target.titleField.value);
         fd.append("description", event.target.descField.value);
         fd.append("date", event.target.date.value);
         fd.append("event", event.target.event.value);
         fd.append("selectedFile", event.target.fileUpload.files[0]);
-        
+
         const config = { headers: { 'Content-Type': 'multipart/form-data' } };
-        
+
         var formElement = event.target;
         var componentThis = this;
-        
+
         axios.post("http://localhost:3001/exhibitor_form_request", fd , config).then(function() {
             console.log("It wo();rked!");
             alert("Tack! Vi har nu mottagit din information.");
-            {/*When the information is submitted, the formElement resets, and the states gets the value "" and null (setState). formElement and componentThis is because this.blablalba refers back to axios.*/}
+            /*When the information is submitted, the formElement resets, and the states gets the value "" and null (setState). formElement and componentThis is because this.blablalba refers back to axios.*/
             formElement.reset();
             componentThis.setState({
                 selectedDate: null,
@@ -107,9 +107,9 @@ class RegisterCard extends React.Component {
                 event: null,
                 selectedFile: null
             });
-        });   
+        });
     }
-    
+
     fileSelectedHandler = event => {
         this.setState({
             selectedFile: event.target.files[0]
@@ -163,7 +163,7 @@ class RegisterCard extends React.Component {
 
 					<div className="RegisterUploadFiles">
 						<section>
-                            <input type="file" name="fileUpload" required="required" onChange={this.fileSelectedHandler}/> 
+                            <input type="file" name="fileUpload" required="required" onChange={this.fileSelectedHandler}/>
                         </section>
                     </div>
 
