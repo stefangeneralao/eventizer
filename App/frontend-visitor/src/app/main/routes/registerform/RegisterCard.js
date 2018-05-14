@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 
 // A form for exhibitators.
 class RegisterCard extends React.Component {
@@ -76,18 +77,30 @@ class RegisterCard extends React.Component {
 		);
 	}
 
-	handleSubmit(event) {
+	handleSubmit(event){
         
-        
+        {/* When the information is sent to the server ("http://localhost:3001/exhibitor_form_request") it contains fd (formdata), an object which contains all of the information in the form. Config enables that the exhibitor can upload files and then logs "It worked"*/}
+         
 		event.preventDefault();
 		console.log(event.target.titleField.value);
         console.log(event.target.descField.value);
         console.log(event.target.date.value);
         console.log(event.target.event.value);
+        console.log(event.target.fileUpload.files[0]);
         
-		//method="POST"
-        //action="http://localhost:3001/exhibitor_form_request"
-	}
+        var fd = new FormData();
+        fd.append("title", event.target.titleField.value);
+        fd.append("description", event.target.descField.value);
+        fd.append("date", event.target.date.value);
+        fd.append("event", event.target.event.value);
+        fd.append("selectedFile", event.target.fileUpload.files[0]);
+        
+        const config = { headers: { 'Content-Type': 'multipart/form-data' } };
+        
+        axios.post("http://localhost:3001/exhibitor_form_request", fd , config).then(function() {
+            console.log("It worked!");
+        });
+    }
     
     fileSelectedHandler = event => {
         this.setState({
@@ -135,40 +148,6 @@ class RegisterCard extends React.Component {
                             <input type="file" name="fileUpload" required="required" onChange={this.fileSelectedHandler}/> 
                         </section>
                     </div>
-                        {/*
-                        <div className="dropzone">
-								<Dropzone name="dropzone" accept="image/jpeg, image/png" onDrop={(accepted, rejected) => {
-				                    this.setState({accepted, rejected})
-                                    }}>
-                                        
-									<p>Klicka här för att ladda upp bilder!
-                                    </p>
-									<p>Endast bilder i formatet *.jpeg och *.png accepteras.
-									</p>
-								</Dropzone>
-                        </div>
-							<aside>
-								<h4>Filer som laddas upp:</h4>
-								    <ul>
-									{
-										this.state.accepted.map(f => <li key={f.name}>{f.name}
-											- {f.size}
-								        bytes</li>)
-									}
-								    </ul>
-								<h4>Filer som inte kommer att laddas upp:</h4>
-								    <ul>
-									{
-										this.state.rejected.map(f => <li key={f.name}>{f.name}
-											- {f.size}
-											bytes</li>)
-									}
-								    </ul>
-							</aside>
-						  </section>
-                        
-					   </div>
-                       */}
 
                     <div className="RegisterSubmit">
 						<input type="submit" value="Skicka!" />

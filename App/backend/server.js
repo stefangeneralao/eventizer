@@ -14,7 +14,7 @@ const writeToFile = (jsonObj, fileName=databaseURL) => {
 	});
 }
 
-app.get('/exhibitor_form_request', (req, res) => {
+app.post('/exhibitor_form_request', (req, res) => {
 	console.log(req.query);
 
 	// Fetch data.
