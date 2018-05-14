@@ -141,6 +141,10 @@
   display: inline;
 }
 
+.slick-arrow {
+  visibility: hidden;
+}
+
 .ExhibitorMiniature {
   text-align: center;
 }
