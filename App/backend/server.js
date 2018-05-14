@@ -3,8 +3,12 @@ const port = 3001;
 const databaseURL = './database-driver.json';
 const cors = require('cors');
 const app = express();
+var bodyParser = require('body-parser')
 
 app.use(cors());
+
+var jsonParser = bodyParser.json()
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 const writeToFile = (jsonObj, fileName=databaseURL) => {
 	const fs = require('fs');
@@ -14,8 +18,8 @@ const writeToFile = (jsonObj, fileName=databaseURL) => {
 	});
 }
 
-app.get('/exhibitor_form_request', (req, res) => {
-	console.log(req.query);
+app.post('/exhibitor_form_request', urlencodedParser, (req, res) => {
+	console.log('request.body:', req.body);
 
 	// Fetch data.
 	const qExhibitorLabel = req.query.title;
