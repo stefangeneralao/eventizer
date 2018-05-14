@@ -71,9 +71,9 @@ class RegisterCard extends React.Component {
 		);
 	}
 
+
 	handleSubmit(event){
-        
-        {/* When the information is sent to the server ("http://localhost:3001/exhibitor_form_request") it contains fd (formdata), an object which contains all of the information in the form. Config enables that the exhibitor can upload files and then logs "It worked"*/}
+        {/* When the information is sent to the server ("http://localhost:3001/exhibitor_form_request") it contains fd (formdata), an object which contains all of the information in the form. Config enables that the exhibitor can upload files (img:s) and then logs "It worked"*/}
          
 		event.preventDefault();
 		console.log(event.target.titleField.value);
@@ -91,9 +91,23 @@ class RegisterCard extends React.Component {
         
         const config = { headers: { 'Content-Type': 'multipart/form-data' } };
         
+        var formElement = event.target;
+        var componentThis = this;
+        
         axios.post("http://localhost:3001/exhibitor_form_request", fd , config).then(function() {
-            console.log("It worked!");
-        });
+            console.log("It wo();rked!");
+            alert("Tack! Vi har nu mottagit din information.");
+            {/*When the information is submitted, the formElement resets, and the states gets the value "" and null (setState). formElement and componentThis is because this.blablalba refers back to axios.*/}
+            formElement.reset();
+            componentThis.setState({
+                selectedDate: null,
+                titleField: "",
+                descField: "",
+                date: null,
+                event: null,
+                selectedFile: null
+            });
+        });   
     }
     
     fileSelectedHandler = event => {
@@ -103,6 +117,7 @@ class RegisterCard extends React.Component {
     }
 
 	render() {
+        console.log("Rerender");
 		console.log(this.state);
 		return (
 			<form onSubmit={this.handleSubmit}>
@@ -153,7 +168,7 @@ class RegisterCard extends React.Component {
                     </div>
 
                     <div className="RegisterSubmit">
-						<input type="submit" value="Skicka!" />
+						<button>Skicka!</button>
 					</div>
 				</div>
 			</form>
