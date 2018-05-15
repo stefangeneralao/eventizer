@@ -10,7 +10,7 @@ class ExhibitorMiniature extends React.Component {
 
 		return (
 			<div className="ExhibitorMiniature">
-				<p><Link to={onClickLink}><img className="ExhibitorMiniatureImage" src={imgURL} alt="Exhibitor Image"/></Link></p>
+				<p><Link to={onClickLink}><img className="ExhibitorMiniatureImage" src={imgURL} alt={this.props.label}/></Link></p>
 				<p><Link to={onClickLink}>{this.props.label}</Link></p>
 			</div>
 		);

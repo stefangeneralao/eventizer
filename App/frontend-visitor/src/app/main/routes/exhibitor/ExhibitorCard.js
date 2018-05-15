@@ -4,11 +4,11 @@ import React from 'react';
 class Exhibitor extends React.Component {
 	render() {
 		const imgURL = "/static/media/" + this.props.image;
-		
+
 		return (
 			<div className="ExhibitorCard">
         <div className="ExhibitorCard__img">
-          <p><img className="ExhibitorMiniatureImage" src={imgURL} alt="Exhibitor Image"/></p>
+          <p><img className="ExhibitorMiniatureImage" src={imgURL} alt={this.props.label}/></p>
         </div>
         <div className="ExhibitorCard__label">
           {this.props.label}
