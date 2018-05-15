@@ -95,7 +95,7 @@ class RegisterCard extends React.Component {
         var componentThis = this;
 
         axios.post("http://localhost:3001/exhibitor_form_request", fd , config).then(function() {
-            console.log("It wo();rked!");
+            console.log("It worked!");
             alert("Tack! Vi har nu mottagit din information.");
             /*When the information is submitted, the formElement resets, and the states gets the value "" and null (setState). formElement and componentThis is because this.blablalba refers back to axios.*/
             formElement.reset();
@@ -128,7 +128,7 @@ class RegisterCard extends React.Component {
 						<input
 							type="text"
 							name="titleField"
-							placeholder="Fyll i titel"
+							placeholder="Fyll i titel..."
 							required="required"
 							onChange={
 								event => {
@@ -137,7 +137,8 @@ class RegisterCard extends React.Component {
 							}
 						/>
 					</fieldgroup>
-
+                    <br>
+                    </br>
 					<fieldgroup className="RegisterDescription">
 						<input
 							type="textarea"
