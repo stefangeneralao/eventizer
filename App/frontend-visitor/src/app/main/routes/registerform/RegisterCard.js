@@ -137,18 +137,6 @@ class RegisterCard extends React.Component {
 							}
 						/>
 					</fieldgroup>
-					<fieldgroup className="RegisterDescription">
-						<input
-							type="textarea"
-							name="descField"
-							placeholder="Beskriv ditt projekt!" required="required"
-							onChange={
-								event => {
-									this.setState({"descField": event.target.value})
-								}
-							}
-						/>
-						</fieldgroup>
 					<div className="RegisterDescription">
 						<fieldgroup>
 							<textarea cols="50" rows="8"
