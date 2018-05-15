@@ -137,7 +137,6 @@ class RegisterCard extends React.Component {
 							}
 						/>
 					</fieldgroup>
-                    </br>
 					<fieldgroup className="RegisterDescription">
 						<input
 							type="textarea"
@@ -146,6 +145,10 @@ class RegisterCard extends React.Component {
 							onChange={
 								event => {
 									this.setState({"descField": event.target.value})
+								}
+							}
+						/>
+						</fieldgroup>
 					<div className="RegisterDescription">
 						<fieldgroup>
 							<textarea cols="50" rows="8"
