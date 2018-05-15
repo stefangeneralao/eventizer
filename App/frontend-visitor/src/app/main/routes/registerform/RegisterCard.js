@@ -122,13 +122,17 @@ class RegisterCard extends React.Component {
 		return (
 			<form onSubmit={this.handleSubmit}>
 				<div className= "FormWrapper">
-					<h2>Fyll i information här!</h2>
+					<h2>Registrera en utställning</h2>
 
 					<fieldgroup className="RegisterTitel">
 						<input
 							type="text"
 							name="titleField"
+<<<<<<< HEAD
 							placeholder="Fyll i titel..."
+=======
+							placeholder="Titel"
+>>>>>>> 1484a38b76b58304f26c2d9de6901ff4726b3bed
 							required="required"
 							onChange={
 								event => {
@@ -137,6 +141,7 @@ class RegisterCard extends React.Component {
 							}
 						/>
 					</fieldgroup>
+<<<<<<< HEAD
                     <br>
                     </br>
 					<fieldgroup className="RegisterDescription">
@@ -147,28 +152,47 @@ class RegisterCard extends React.Component {
 							onChange={
 								event => {
 									this.setState({"descField": event.target.value})
+=======
+
+					<div className="RegisterDescription">
+						<fieldgroup>
+							<textarea cols="50" rows="8"
+								name="descField"
+								placeholder="Beskriv din utställning" required="required"
+								onChange={
+									event => {
+										this.setState({"descField": event.target.value})
+									}
+>>>>>>> 1484a38b76b58304f26c2d9de6901ff4726b3bed
 								}
-							}
-						/>
-					</fieldgroup>
+							></textarea>
+						</fieldgroup>
+					</div>
 
 					<fieldgroup className="RegisterDate">
-						<p>Välj datum nedan:</p>
-						{this.getDateDropDown()}
+						<label className="RegisterFormLabel">Välj datum nedan:</label>
+						<div>
+							{this.getDateDropDown()}
+						</div>
 					</fieldgroup>
 
 					<fieldgroup className="RegisterEvent">
-						<p>Välj event:</p>
-						{this.getEventDropDown()}
+						<label className="RegisterFormLabel">Välj event:</label>
+						<div>
+							{this.getEventDropDown()}
+						</div>
 					</fieldgroup>
 
 					<div className="RegisterUploadFiles">
 						<section>
-                            <input type="file" name="fileUpload" required="required" onChange={this.fileSelectedHandler}/>
-                        </section>
-                    </div>
+							<label className="RegisterFormLabel">Lägg till en omslagsbild:</label>
+							<div>
+              	<input type="file" name="fileUpload" required="required" onChange={this.fileSelectedHandler}/>
+							</div>
+						</section>
+          </div>
 
-                    <div className="RegisterSubmit">
+          <div className="RegisterSubmit">
 						<button>Skicka!</button>
 					</div>
 				</div>

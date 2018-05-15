@@ -30,7 +30,7 @@
   text-align: center;
 }
 
-.DateCard, .ExhibitorCard {
+.DateCard, .ExhibitorCard, .FormWrapper {
 	box-shadow: 0 2px 6px #ccc;
 	max-width: 700px;
 	margin: 20px auto;
@@ -141,6 +141,10 @@
   display: inline;
 }
 
+.slick-arrow {
+  visibility: hidden;
+}
+
 .ExhibitorMiniature {
   text-align: center;
 }
@@ -166,58 +170,68 @@
   margin-top: 4px;
 }
 
+.RegisterDescription, .RegisterUploadFiles, .RegisterSubmit {
+  margin: 10px 0px 10px 0px;
+}
+
+.RegisterTitel > input {
+  width: 316px;
+}
+
+.RegisterFormLabel, .RegisterSubmit {
+  display: block;
+  margin: 20px 0px 4px 0px;
+}
+
+.EventComponent__moreBtn, .HomeBtn {
+  cursor: pointer;
+}
+
 @media screen and (max-width:480px) {
-.EventComponent__event-label {
-  text-align: center;
-  color: green;
+  .EventComponent__event-label {
+    text-align: center;
+    color: green;
+  }
 
+  .EventComponent__event-label:hover {
+   	color: #0645AD;
+   	text-decoration: underline;
+  }
 
- }
+   .EventComponent__event-time {
+     padding-left: 18.5%;
+     display: none;
+  }
 
-.EventComponent__event-label:hover {
- 	color: #0645AD;
- 	text-decoration: underline;
+   .EventComponent__event-description {
+     padding-left: 18.5%;
+     margin-bottom: 20px;
+     display: none;
+  }
 
-}
-
- .EventComponent__event-time {
-   padding-left: 18.5%;
-   display: none;
-}
-
- .EventComponent__event-description {
-   padding-left: 18.5%;
-   margin-bottom: 20px;
-   display: none;
-}
-.EventComponent__event-location {
-	display: none;
-	width: 100px;
-	padding-left: 30px;
-
-}
-
+  .EventComponent__event-location {
+  	display: none;
+  	width: 100px;
+  	padding-left: 30px;
+  }
 }
 
 @media screen and (max-width:768px) {
-.EventComponent__event-label {
-  display: inline;
+  .EventComponent__event-label {
+    display: inline;
+  }
 
+  .EventComponent__event-label:hover {
+   	color: #0645AD;
+    text-decoration: underline;
+  }
 
-}
+  .EventComponent__event-time {
+    padding-left: 18.5%;
+  }
 
-.EventComponent__event-label:hover {
- 	color: #0645AD;
-  text-decoration: underline;
-}
-
-.EventComponent__event-time {
-  padding-left: 18.5%;
-}
-
-.EventComponent__event-description {
-  padding-left: 18.5%;
-  margin-bottom: 20px;
-}
-
+  .EventComponent__event-description {
+    padding-left: 18.5%;
+    margin-bottom: 20px;
+  }
 }
