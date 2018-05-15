@@ -128,11 +128,7 @@ class RegisterCard extends React.Component {
 						<input
 							type="text"
 							name="titleField"
-<<<<<<< HEAD
 							placeholder="Fyll i titel..."
-=======
-							placeholder="Titel"
->>>>>>> 1484a38b76b58304f26c2d9de6901ff4726b3bed
 							required="required"
 							onChange={
 								event => {
@@ -141,8 +137,6 @@ class RegisterCard extends React.Component {
 							}
 						/>
 					</fieldgroup>
-<<<<<<< HEAD
-                    <br>
                     </br>
 					<fieldgroup className="RegisterDescription">
 						<input
@@ -152,8 +146,6 @@ class RegisterCard extends React.Component {
 							onChange={
 								event => {
 									this.setState({"descField": event.target.value})
-=======
-
 					<div className="RegisterDescription">
 						<fieldgroup>
 							<textarea cols="50" rows="8"
@@ -163,7 +155,6 @@ class RegisterCard extends React.Component {
 									event => {
 										this.setState({"descField": event.target.value})
 									}
->>>>>>> 1484a38b76b58304f26c2d9de6901ff4726b3bed
 								}
 							></textarea>
 						</fieldgroup>
