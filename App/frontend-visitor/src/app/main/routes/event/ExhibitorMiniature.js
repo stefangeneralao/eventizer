@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-//Component that display exhibitor miniatures.
+//Component that display exhibitor miniatures
 class ExhibitorMiniature extends React.Component {
 
 	render() {

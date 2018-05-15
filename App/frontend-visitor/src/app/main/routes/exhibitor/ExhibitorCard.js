@@ -1,5 +1,6 @@
 import React from 'react';
 
+//Component that renders a ExhibitorCard
 class Exhibitor extends React.Component {
 	render() {
 		return (

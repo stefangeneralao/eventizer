@@ -1,7 +1,7 @@
 import React from 'react';
 import ExhibitorMiniature from './ExhibitorMiniature';
 
-//Component that prints Exhibitors.
+//Component that loops eventexhibitors and for each exhibitor returs a exhibitorminiature component
 class ExhibitorContainer extends React.Component {
 	printExhibitors() {
     return this.props.eventExhibitors.map((eventExhibitor, i) => {
@@ -14,7 +14,7 @@ class ExhibitorContainer extends React.Component {
     });
   };
 
-	//Exhibitors that does not have category does not need a header.
+	//Exhibitors that does not have category does not need a header
 	render() {
 		return (
 			<div className="ExhibitorContainer">
