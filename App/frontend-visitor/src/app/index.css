@@ -149,6 +149,10 @@
   text-align: center;
 }
 
+.ExhibitorMiniatureImage {
+  width: 100%;
+}
+
 .ExhibitorContainer__ExhibitorGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));

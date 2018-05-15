@@ -11,6 +11,7 @@
 					"imgID": "ia.jpg",
 					"exhibitors": [
 						{
+							"imgID": "kårenkaffe.jpg",
 							"exhibitionID": "0000",
 							"label": "Gästföreläsning 1: Daniel Krusenstråhle, Fieldly",
 							"description": "Daniel Krusenstråhle är CEO på Fieldly etc etc."
