@@ -188,6 +188,14 @@
 }
 
 @media screen and (max-width:480px) {
+  .App-header {
+    height: 100px;
+  }
+
+  .App-title {
+    font-size: 40px;
+  }
+
   .EventComponent__event-label {
     text-align: center;
     color: green;
@@ -221,6 +229,14 @@
 }
 
 @media screen and (max-width:768px) {
+  .App-header {
+    height: 100px;
+  }
+
+  .App-title {
+    font-size: 40px;
+  }
+
   .EventComponent__event-label {
     display: inline;
   }
