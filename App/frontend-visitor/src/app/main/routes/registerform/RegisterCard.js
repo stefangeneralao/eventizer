@@ -96,7 +96,7 @@ class RegisterCard extends React.Component {
 
         axios.post("http://localhost:3001/exhibitor_form_request", fd , config).then(function() {
             console.log("It worked!");
-            alert("Tack! Vi har nu mottagit din information.");
+            alert("Tack! Ditt projekt är nu anmält.");
             /*When the information is submitted, the formElement resets, and the states gets the value "" and null (setState). formElement and componentThis is because this.blablalba refers back to axios.*/
             formElement.reset();
             componentThis.setState({
@@ -128,7 +128,7 @@ class RegisterCard extends React.Component {
 						<input
 							type="text"
 							name="titleField"
-							placeholder="Fyll i titel..."
+							placeholder="Projektnamn"
 							required="required"
                             accept=".jpg, .jpeg, .png"
 							onChange={
@@ -142,7 +142,7 @@ class RegisterCard extends React.Component {
 						<fieldgroup>
 							<textarea cols="50" rows="8"
 								name="descField"
-								placeholder="Beskriv din utställning" required="required"
+								placeholder="Beskriv kortfattat din utställning" required="required"
 								onChange={
 									event => {
 										this.setState({"descField": event.target.value})
@@ -168,7 +168,7 @@ class RegisterCard extends React.Component {
 
 					<div className="RegisterUploadFiles">
 						<section>
-							<label className="RegisterFormLabel">Lägg till en omslagsbild:</label>
+							<label className="RegisterFormLabel">Lägg till en bild:</label>
 							<div>
               	<input type="file" name="fileUpload" required="required" onChange={this.fileSelectedHandler}/>
 							</div>

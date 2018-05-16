@@ -1,6 +1,5 @@
 import React from 'react';
 import './index.css';
-// import DateCard from './Components/DateCard';
 import Main from './main';
 import Footer from './footer';
 import Header from './header';
@@ -34,7 +33,7 @@ class App extends React.Component {
 				<Header />
 				{/*}<BreadCrumb />*/}
 				<Main store={this.state.store} />
-        <Footer />
+				<Footer />
 			</div>
 		);
 	}

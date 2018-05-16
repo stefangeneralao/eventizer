@@ -6,6 +6,7 @@ const app = express();
 var bodyParser = require('body-parser')
 var multer  = require('multer')
 var upload = multer({ dest: 'uploads/' })
+const uuidv1 = require('uuid/v1');
 
 app.use(cors());
 
@@ -32,7 +33,7 @@ app.post('/exhibitor_form_request', upload.array('selectedFile'), (req, res) => 
 
 	// Create a new exhibitor object.
 	const newExhibitorObject = {
-		exhibitionID: "" + Math.random(),
+		exhibitionID: "" + uuidv1(),
 		label: qExhibitorLabel,
 		description: qDescription
 	}
