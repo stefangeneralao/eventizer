@@ -10,6 +10,7 @@
  	font-size: 4.5rem;
 }
 
+
 .App-header > h1 > a {
   color: white;
   text-decoration: none;
@@ -46,11 +47,6 @@
   padding: 10px;
   border-radius: 2px;
   transition: 100ms;
-}
-
-.DateCard:hover, .EventCard:hover {
-	box-shadow: 0 4px 12px #ccc;
-	transition: 100ms;
 }
 
 .DateCard__date {
