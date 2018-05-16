@@ -4,6 +4,9 @@ const databaseURL = './database-driver.json';
 const cors = require('cors');
 const app = express();
 var bodyParser = require('body-parser')
+var multer  = require('multer')
+var upload = multer({ dest: 'uploads/' })
+const uuidv1 = require('uuid/v1');
 
 app.use(cors());
 
@@ -18,7 +21,8 @@ const writeToFile = (jsonObj, fileName=databaseURL) => {
 	});
 }
 
-app.post('/exhibitor_form_request', urlencodedParser, (req, res) => {
+app.post('/exhibitor_form_request', upload.array('selectedFile'), (req, res) => {
+	console.log('request.file', req.file);
 	console.log('request.body:', req.body);
 
 	// Fetch data.
@@ -29,7 +33,7 @@ app.post('/exhibitor_form_request', urlencodedParser, (req, res) => {
 
 	// Create a new exhibitor object.
 	const newExhibitorObject = {
-		exhibitionID: "" + Math.random(),
+		exhibitionID: "" + uuidv1(),
 		label: qExhibitorLabel,
 		description: qDescription
 	}
