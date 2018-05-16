@@ -124,7 +124,7 @@ class RegisterCard extends React.Component {
 				<div className= "FormWrapper">
 					<h2>Registrera en utställning</h2>
 
-					<fieldgroup className="RegisterTitel">
+					<div className="RegisterTitel">
 						<input
 							type="text"
 							name="titleField"
@@ -136,34 +136,33 @@ class RegisterCard extends React.Component {
 								}
 							}
 						/>
-					</fieldgroup>
+					</div>
 					<div className="RegisterDescription">
-						<fieldgroup>
-							<textarea cols="50" rows="8"
-								name="descField"
-								placeholder="Beskriv kortfattat din utställning" required="required"
-								onChange={
-									event => {
-										this.setState({"descField": event.target.value})
-									}
-								}
-							></textarea>
-						</fieldgroup>
+                        <textarea cols="50" rows="8"
+                            name="descField"
+                            placeholder="Beskriv kortfattat din utställning" 
+                            required="required"
+				            onChange={
+                                event => {
+                                this.setState({"descField": event.target.value})
+                                }
+                            }>
+                        </textarea>
 					</div>
 
-					<fieldgroup className="RegisterDate">
-						<label className="RegisterFormLabel">Välj datum nedan:</label>
+					<div className="RegisterDate">
+						<label className="RegisterFormLabel">Välj datum för event nedan:</label>
 						<div>
 							{this.getDateDropDown()}
 						</div>
-					</fieldgroup>
+					</div>
 
-					<fieldgroup className="RegisterEvent">
+					<div className="RegisterEvent">
 						<label className="RegisterFormLabel">Välj event:</label>
 						<div>
 							{this.getEventDropDown()}
 						</div>
-					</fieldgroup>
+					</div>
 
 					<div className="RegisterUploadFiles">
 						<section>
@@ -175,11 +174,11 @@ class RegisterCard extends React.Component {
                                 required="required"
                                 accept=".jpg, .jpeg, .png"
                                 onChange={this.fileSelectedHandler}/>
-							</div>
+				            </div>
 						</section>
-          </div>
+                    </div>
 
-          <div className="RegisterSubmit">
+                    <div className="RegisterSubmit">
 						<button>Skicka!</button>
 					</div>
 				</div>
