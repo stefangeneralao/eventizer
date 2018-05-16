@@ -10,7 +10,6 @@
  	font-size: 4.5rem;
 }
 
-
 .App-header > h1 > a {
   color: white;
   text-decoration: none;
@@ -19,7 +18,11 @@
 .HomeBtn.open {
   float: left;
   filter: invert(1);
-  width: 100px;
+  width: 60px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: +1;
 }
 
 .HomeBtn.closed {
