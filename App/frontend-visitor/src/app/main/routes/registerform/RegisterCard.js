@@ -130,6 +130,7 @@ class RegisterCard extends React.Component {
 							name="titleField"
 							placeholder="Fyll i titel..."
 							required="required"
+                            accept=".jpg, .jpeg, .png"
 							onChange={
 								event => {
 									this.setState({"titleField": event.target.value})
