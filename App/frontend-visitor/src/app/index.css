@@ -218,6 +218,10 @@
   	width: 100px;
   	padding-left: 30px;
   }
+
+  .ExhibitorMiniatureImage {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width:768px) {
@@ -237,5 +241,9 @@
   .EventComponent__event-description {
     padding-left: 18.5%;
     margin-bottom: 20px;
+  }
+
+  .ExhibitorMiniatureImage {
+    width: 100%;
   }
 }
