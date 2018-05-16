@@ -211,17 +211,14 @@
 
    .EventComponent__event-time {
      padding-left: 18.5%;
-     display: none;
   }
 
    .EventComponent__event-description {
-     padding-left: 18.5%;
+     padding-left: 0%;
      margin-bottom: 20px;
-     display: none;
   }
 
   .EventComponent__event-location {
-  	display: none;
   	width: 100px;
   	padding-left: 30px;
   }
@@ -254,7 +251,7 @@
   }
 
   .EventComponent__event-description {
-    padding-left: 18.5%;
+    padding-left: 0%;
     margin-bottom: 20px;
   }
 
