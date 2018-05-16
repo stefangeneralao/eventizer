@@ -32,8 +32,8 @@ class DateCard extends React.Component {
 	render() {
 		return (
 			<div className="DateCard">
-				<ImageComponent imageID={this.getEventImages()} />
 				{this.getDate()}
+				<ImageComponent imageID={this.getEventImages()} />
 				<EventContainer events={this.getEventData()} />
 			</div>
 		);

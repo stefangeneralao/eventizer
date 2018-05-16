@@ -54,8 +54,10 @@
 
 .DateCard__date {
 	text-align: left;
-	color: #aaa;
-	font-size: 90%;
+	color: #000;
+	font-size: 30px;
+  margin-bottom: 10px;
+  text-shadow: 0 4px 8px #ccc;
 }
 
 .DateCard__event {
