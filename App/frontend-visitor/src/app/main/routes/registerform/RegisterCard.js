@@ -130,7 +130,6 @@ class RegisterCard extends React.Component {
 							name="titleField"
 							placeholder="Projektnamn"
 							required="required"
-                            accept=".jpg, .jpeg, .png"
 							onChange={
 								event => {
 									this.setState({"titleField": event.target.value})
@@ -170,7 +169,12 @@ class RegisterCard extends React.Component {
 						<section>
 							<label className="RegisterFormLabel">Lägg till en bild:</label>
 							<div>
-              	<input type="file" name="fileUpload" required="required" onChange={this.fileSelectedHandler}/>
+                                <input 
+                                type="file" 
+                                name="fileUpload" 
+                                required="required"
+                                accept=".jpg, .jpeg, .png"
+                                onChange={this.fileSelectedHandler}/>
 							</div>
 						</section>
           </div>
