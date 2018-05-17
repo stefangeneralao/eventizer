@@ -74,11 +74,14 @@
 	display: none;
 }
 
+.slick-dots {
+  margin-bottom: 30px;
+  bottom: auto;
+}
 .EventComponent {
-	margin-top: 30px;
-	margin-bottom: 30px;
-	margin-left: 30px;
-	margin-right: 30px;
+	margin-bottom: 10px;
+  padding: 20px;
+  box-shadow: 0px 2px 0px 0px #E6E6E6;
 	display: grid;
 	grid-template-columns: 3fr 1fr 30px;
 	grid-template-rows: auto auto auto;
