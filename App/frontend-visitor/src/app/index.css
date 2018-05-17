@@ -6,6 +6,10 @@
 	text-align: center;
 }
 
+a {
+  text-decoration: none;
+}
+
 .App-title, .DatePage-title {
  	font-size: 4.5rem;
 }
@@ -80,7 +84,7 @@
 }
 .EventComponent {
 	margin-bottom: 10px;
-  padding: 20px;
+  padding: 15px;
   box-shadow: 0px 2px 0px 0px #E6E6E6;
 	display: grid;
 	grid-template-columns: 3fr 1fr 30px;
@@ -91,14 +95,21 @@
 		'description description description';
 }
 
+.EventComponent:hover {
+  box-shadow: 0 2px 6px #ccc;
+}
+
 .EventComponent__event-location {
 	grid-area: location;
+  color: #505054;
 	text-align: right;
 	width: 100px;
 	padding-left: 30px;
 }
 
 .EventComponent__event-label {
+  color: #505054;
+  text-decoration: none;
 	grid-area: label;
 	display: inline;
 }
@@ -115,7 +126,7 @@
 }
 
 .EventComponent__event-label:hover {
-	color: #0645AD;
+	color: #000000;
 	text-decoration: underline;
 }
 
@@ -151,6 +162,18 @@
 
 .ExhibitorMiniature {
   text-align: center;
+}
+
+.ExhibitorMiniature a {
+  color: #000;
+}
+
+.ExhibitorMiniature a:hover {
+  text-decoration: underline;
+}
+
+.ExhibitorMiniature:hover {
+  box-shadow: 0 2px 6px #ccc;
 }
 
 .ExhibitorMiniatureImage {
@@ -206,11 +229,12 @@
 
   .EventComponent__event-label {
     text-align: center;
-    color: green;
+    font-size: 20px;
+    color: #505054;
   }
 
   .EventComponent__event-label:hover {
-   	color: #0645AD;
+   	color: #505054;
    	text-decoration: underline;
   }
 
@@ -244,10 +268,11 @@
 
   .EventComponent__event-label {
     display: inline;
+    font-size: 20px;
   }
 
   .EventComponent__event-label:hover {
-   	color: #0645AD;
+   	color: #505054;
     text-decoration: underline;
   }
 
