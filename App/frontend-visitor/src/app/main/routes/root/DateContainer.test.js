@@ -11,6 +11,7 @@ describe('<DateContainer />', () => {
     expect(wrapper.hasClass("DateContainer"));
   });
 
+//This test probably doesn´t test anything atm (?) Cannont falsify, but test fails if boolean is set to 'false' instead of 'true'
   it('should render', () => {
     const wrapper = shallow(<div className="DateCard" cardsData={data.dates} />);
     expect(wrapper.find('.DateCard').exists()).toEqual(true);

@@ -6,6 +6,7 @@ const data = {"dates":[{"date":"2018-04-18","events":[{"label":"IA-dagen","locat
 
 
 describe('<EventContainer />', () => {
+//This test probably doesn´t test anything atm (?) Cannont falsify, but test fails if boolean is set to 'false' instead of 'true'
   it('should render', () => {
     const wrapper = shallow(<div className="EventContainer" cardsData={data.dates} />);
     expect(wrapper.find('.EventContainer').exists()).toEqual(true);

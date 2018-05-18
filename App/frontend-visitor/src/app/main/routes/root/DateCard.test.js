@@ -6,15 +6,10 @@ const data = {"dates":[{"date":"2018-04-18","events":[{"label":"IA-dagen","locat
 
 
 describe('<DateCard />', () => {
-//Following tests doesnt really test anything atm
+//Following tests probably doesn´t test anything atm (?) Cannont falsify, but test fails if boolean is set to 'false' instead of 'true'
   it('should render DateCard', () => {
-    const wrapper = shallow(<div className="DateCard" cardsData={data.dates} />);
+    const wrapper = shallow(<div className="DateCard" store={data.dates} />);
     expect(wrapper.find('.DateCard').exists()).toEqual(true);
-  });
-
-  it('should NOT render a DateContainer', () => {
-    const wrapper = shallow(<div className="DateCard" cardsData={data.dates} />);
-    expect(wrapper.find('.DateContainer').exists()).toEqual(false);
   });
 
   it('should render ImageComponent', () => {
@@ -22,19 +17,9 @@ describe('<DateCard />', () => {
     expect(wrapper.find('.ImageComponent').exists()).toEqual(true);
   });
 
-  it('should NOT render a ImageCarousel', () => {
-    const wrapper = shallow(<div className="ImageComponent" cardsData={data.dates} />);
-    expect(wrapper.find('.ImageCarousel').exists()).toEqual(false);
-  });
-
   it('should render EventContainer', () => {
     const wrapper = shallow(<div className="EventContainer" cardsData={data.dates} />);
     expect(wrapper.find('.EventContainer').exists()).toEqual(true);
-  });
-
-  it('should NOT render EventCard', () => {
-    const wrapper = shallow(<div className="EventContainer" cardsData={data.dates} />);
-    expect(wrapper.find('.EventCard').exists()).toEqual(false);
   });
 
   //Test disabled atm (TypeError: Cannot read property 'map' of undefined)

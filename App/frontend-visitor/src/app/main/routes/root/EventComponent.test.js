@@ -11,6 +11,7 @@ describe('<EventComponent />', () => {
     expect(wrapper.hasClass("EventComponent"));
   });
 
+//This test probably doesn´t test anything atm (?) Cannont falsify, but test fails if boolean is set to 'false' instead of 'true'
   it('should render', () => {
     const wrapper = shallow(<div className="EventComponent" cardsData={data.dates} />);
     expect(wrapper.find('.EventComponent').exists()).toEqual(true);

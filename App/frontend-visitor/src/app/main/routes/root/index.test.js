@@ -10,6 +10,8 @@ describe('Root', function() {
     const wrapper = shallow(<Root store={data} />);
     expect(wrapper.hasClass("Root"));
   });
+
+//This test probably doesn´t test anything atm (?) Cannont falsify, but test fails if boolean is set to 'false' instead of 'true'
   it('should render', () => {
     const wrapper = shallow(<div className="Root" cardsData={data.dates} />);
     expect(wrapper.find('.Root').exists()).toEqual(true);
