@@ -12,7 +12,8 @@ class Event extends React.Component {
 		return eventId;
 	}
 
-	// Function that groups exhibitors by category.
+	// Function that groups exhibitors by category
+	// Uses the reduce method to loop the exhibitors and grouping them by category. Creating lists of category on a object.
 	getGroupedExhibitors(exhibitors) {
     return exhibitors.reduce((obj, exhibitor) => {
 				var key = exhibitor.category || "no-category";
@@ -27,9 +28,11 @@ class Event extends React.Component {
 		const eventId = this.getEventIdFromURL();
 		const dates = this.props.store.dates;
 
+		//Loops every date to get the events
 		for(let i in dates) {
 			const eventListItem = dates[i]['events'];
 
+			//Loops every event until eventId in URL matches an event and returns the right event
 			for(let j in eventListItem) {
 				const eventLabel = eventListItem[j]['label'];
 				const encodedEventLabel = encodeURIComponent(eventLabel.trim())

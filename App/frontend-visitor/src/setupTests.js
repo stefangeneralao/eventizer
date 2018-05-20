@@ -4,6 +4,11 @@ import "raf/polyfill";
 import Enzyme from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import { configure } from 'enzyme';
+import chai from 'chai';
+import expect from 'chai';
+import chaiEnzyme from 'chai-enzyme';
+
+chai.use(chaiEnzyme()) // Note the invocation at the end
 
 configure({ adapter: new Adapter() });
 
