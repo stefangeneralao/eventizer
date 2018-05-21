@@ -6,8 +6,8 @@ class Exhibitor extends React.Component {
 
 	// Get ExhibitorId from browser URL
 	getExhibitorIdFromURL() {
-		let url = document.URL;
-		let parts = url.split('/')
+		const url = document.URL;
+		const parts = url.split('/');
 		return parts[parts.length - 1];
 	}
 
@@ -16,19 +16,19 @@ class Exhibitor extends React.Component {
 		const exhibitorId = this.getExhibitorIdFromURL();
 		const dates = this.props.store.dates;
 
-		//Loops every date to get the events
+		// Loops every date to get the events
 		for(let i in dates) {
 			const eventListItem = dates[i]['events'];
 
-			//Loops every event to get the exhibitors
+			// Loops every event to get the exhibitors
 			for(let j in eventListItem) {
 				const exhibitors = eventListItem[j]['exhibitors'];
 
-				//Loops every exhibitor until exhibitorId in URL matches an exhibitor and returns the right exhibitor
+				// Loops every exhibitor until exhibitorId in URL matches an exhibitor
 				for (let z in exhibitors) {
-					var exhibitor = exhibitors[z];
-					const encodedExhibitorId = encodeURIComponent(exhibitorId.trim())
-					if(exhibitor.exhibitionID === encodedExhibitorId){
+					const exhibitor = exhibitors[z];
+					const encodedExhibitorId = encodeURIComponent(exhibitorId.trim());
+					if (exhibitor.exhibitionID === encodedExhibitorId) {
 						const date = dates[i]['date'];
 						const time = eventListItem[j]['time'];
 						const exhibitorData = {
@@ -48,14 +48,17 @@ class Exhibitor extends React.Component {
 	}
 
 	render() {
-		let exhibitorData = this.getExhibitorData();
-		return (<ExhibitorCard
-						id={exhibitorData.id}
-						label={exhibitorData.label}
-						description={exhibitorData.description}
-						image={exhibitorData.img}
-						date={exhibitorData.date}
-						time={exhibitorData.time} />);
+		const exhibitorData = this.getExhibitorData();
+		return (
+			<ExhibitorCard
+				id={exhibitorData.id}
+				label={exhibitorData.label}
+				description={exhibitorData.description}
+				image={exhibitorData.img}
+				date={exhibitorData.date}
+				time={exhibitorData.time}
+			/>
+		);
 	}
 }
 
