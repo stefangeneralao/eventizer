@@ -16,6 +16,7 @@ class App extends React.Component {
 		};
 	}
 
+	// Component that fetch data from database and update state.
 	componentDidMount() {
 		axios.get('http://localhost:3001/get_store')
 			.then(res => {
@@ -31,7 +32,6 @@ class App extends React.Component {
 		return (
 			<div className="App">
 				<Header />
-				{/*}<BreadCrumb />*/}
 				<Main store={this.state.store} />
 				<Footer />
 			</div>
