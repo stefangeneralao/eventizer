@@ -23,8 +23,13 @@ describe('<DateCard />', () => {
   });
 
   //Test disabled atm (TypeError: Cannot read property 'map' of undefined)
-  xit('should have className DateCard', () => {
-    const wrapper = shallow(<DateCard cardsData={data.dates} />);
+  it('should have className DateCard', () => {
+    const wrapper = shallow(
+      <DateCard
+        date={data.dates[0]['date']}
+        events={data.dates[0]['events']}
+      />
+    );
     expect(wrapper.hasClass("DateCard"));
   });
 });
