@@ -1,7 +1,7 @@
 import React from 'react';
 import ExhibitorContainer from './ExhibitorContainer';
 
-//Component that displays the event information
+// Component that displays the event information
 class EventCard extends React.Component {
 	getEventTitle() {
 		return this.props.title;
@@ -19,11 +19,16 @@ class EventCard extends React.Component {
 		return this.props.date;
 	}
 
-	//Function that returns a list of exhhibitor containers by looping the keys
+	// Function that returns a list of exhhibitor containers by looping the keys
 	getEventExhibitors() {
 		return Object.keys(this.props.exhibitorContainers).map((key, i) => {
-				var exhibitors = this.props.exhibitorContainers[key];
-        return <ExhibitorContainer eventExhibitors={exhibitors} category={key} key={i} />;
+				const exhibitors = this.props.exhibitorContainers[key];
+        return
+					<ExhibitorContainer
+						eventExhibitors={exhibitors}
+						category={key}
+						key={i}
+					/>;
     });
 	}
 
