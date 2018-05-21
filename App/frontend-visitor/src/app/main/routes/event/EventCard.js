@@ -23,12 +23,13 @@ class EventCard extends React.Component {
 	getEventExhibitors() {
 		return Object.keys(this.props.exhibitorContainers).map((key, i) => {
 				const exhibitors = this.props.exhibitorContainers[key];
-        return
+        return (
 					<ExhibitorContainer
 						eventExhibitors={exhibitors}
 						category={key}
 						key={i}
-					/>;
+					/>
+				);
     });
 	}
 
