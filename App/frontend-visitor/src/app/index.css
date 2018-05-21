@@ -257,6 +257,45 @@ a {
   }
 }
 
+@media screen and (min-width:600px) {
+  .App-header {
+    height: 100px;
+  }
+
+  .App-title {
+    font-size: 40px;
+  }
+
+  .EventComponent__event-label {
+    text-align: center;
+    font-size: 20px;
+    color: #505054;
+  }
+
+  .EventComponent__event-label:hover {
+   	color: #505054;
+   	text-decoration: underline;
+  }
+
+   .EventComponent__event-time {
+     padding-left: 18.5%;
+  }
+
+   .EventComponent__event-description {
+     padding-left: 0%;
+     margin-bottom: 20px;
+  }
+
+  .EventComponent__event-location {
+  	width: 100px;
+  	padding-left: 30px;
+  }
+
+  .ExhibitorMiniatureImage {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width:768px) {
   .App-header {
     height: 100px;
