@@ -90,7 +90,9 @@ app.get('/get_store', (req, res) => {
 });
 
 app.get('/get_image', (req, res) => {
-  
+  const fileName = req.query.imageurl;
+  console.log(fileName);
+  res.sendFile(fileName, { root: __dirname + '/uploads/' });
 });
 
 app.listen(port, () => console.log('Listening on port ' + port));
