@@ -8,7 +8,7 @@ class ExhibitorContainer extends React.Component {
         return (
 					<ExhibitorMiniature
 						id={eventExhibitor.exhibitionID}
-						image={eventExhibitor.imgID}
+						image={eventExhibitor.imgURL}
 						label={eventExhibitor.label}
 						description={eventExhibitor.description}
 						key={i}

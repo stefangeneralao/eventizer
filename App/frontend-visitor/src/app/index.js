@@ -11,7 +11,6 @@ class App extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			breadcrumb: "/",
 			store: store
 		};
 	}
@@ -28,7 +27,6 @@ class App extends React.Component {
 	}
 
 	render() {
-		console.log(this.state);
 		return (
 			<div className="App">
 				<Header />

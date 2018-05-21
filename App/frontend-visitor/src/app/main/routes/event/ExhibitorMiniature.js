@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 class ExhibitorMiniature extends React.Component {
 	render() {
 		const onClickLink = '/exhibitor/' + this.props.id;
-		const imgURL = '/static/media/' + this.props.image;
 
 		return (
 			<div className="ExhibitorMiniature">
@@ -13,7 +12,7 @@ class ExhibitorMiniature extends React.Component {
 					<Link to={onClickLink}>
 						<img
 							className="ExhibitorMiniatureImage"
-							src={imgURL}
+							src={'http://localhost:3001/get_image?imageurl=' + this.props.image}
 							alt={this.props.label}
 						/>
 					</Link>

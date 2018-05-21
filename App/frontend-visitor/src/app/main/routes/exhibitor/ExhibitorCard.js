@@ -1,18 +1,17 @@
 import React from 'react';
+import axios from 'axios';
 
 // Component that renders a ExhibitorCard
 class Exhibitor extends React.Component {
 	render() {
-		const imgURL = '/static/media/' + this.props.image;
-
 		return (
 			<div className="ExhibitorCard">
         <div className="ExhibitorCard__img">
           <p>
 						<img
-						className="ExhibitorMiniatureImage"
-						src={imgURL}
-						alt={this.props.label}
+  						className="ExhibitorMiniatureImage"
+  						src={'http://localhost:3001/get_image?imageurl=' + this.props.image}
+  						alt={this.props.label}
 						/>
 					</p>
         </div>

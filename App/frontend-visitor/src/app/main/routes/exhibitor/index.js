@@ -35,7 +35,7 @@ class Exhibitor extends React.Component {
 							'id': exhibitor.exhibitionID,
 							'label': exhibitor.label,
 							'description': exhibitor.description,
-							'img': exhibitor.imgID,
+							'img': exhibitor.imgURL,
 							'date': date,
 							'time': time
 						};
