@@ -140,7 +140,7 @@ class RegisterCard extends React.Component {
 					<div className="RegisterDescription">
                         <textarea cols="50" rows="8"
                             name="descField"
-                            placeholder="Beskriv kortfattat din utställning" 
+                            placeholder="Beskriv kortfattat din utställning"
                             required="required"
 				            onChange={
                                 event => {
@@ -168,9 +168,9 @@ class RegisterCard extends React.Component {
 						<section>
 							<label className="RegisterFormLabel">Lägg till en bild:</label>
 							<div>
-                                <input 
-                                type="file" 
-                                name="fileUpload" 
+                                <input
+                                type="file"
+                                name="fileUpload"
                                 required="required"
                                 accept=".jpg, .jpeg, .png"
                                 onChange={this.fileSelectedHandler}/>
