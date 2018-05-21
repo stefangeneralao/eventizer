@@ -1,13 +1,12 @@
 import React from 'react';
-import Slider from "react-slick";
-import "../../../index.css"
-import "../../../../index.css";
+import Slider from 'react-slick';
+import '../../../index.css';
+import '../../../../index.css';
 
-//Component that returns images by imgID for ImageCarousel
+// Component that returns images by imgID for ImageCarousel
 class ImageCarousel extends React.Component {
-
   render() {
-    var settings = {
+    let settings = {
       dots: true,
       autoplay: true,
       fade: true,
@@ -16,17 +15,16 @@ class ImageCarousel extends React.Component {
 
     return (
       <div>
-      <Slider {...settings}>
-        {this.props.imageID.map((imgID,i) => {
-        return (
-          <div key={i}>
-              <img src={require("../../../../images/" + imgID.imageID)} className="EventImage" alt=" "/>
-          </div>
-          );
-        })}
-      </Slider>
-      </div>
-    )
-  };
-}
+        <Slider {...settings}>
+          {this.props.imageID.map((imgID, i) => {
+            return (
+              <div key={i}>
+                <img src={require("../../../../images/" + imgID.imageID)}
+                className="EventImage" alt="Eventimage"/>
+              </div>);
+            })}
+        </Slider>
+      </div>);
+    }
+  }
 export default ImageCarousel;
