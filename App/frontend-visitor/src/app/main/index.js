@@ -5,6 +5,7 @@ import Event from './routes/event';
 import Exhibitor from './routes/exhibitor';
 import RegisterForm from './routes/registerform';
 
+// Component that returns not found.
 const getNotFoundComponent = () => {
 	return (
 		<div>
@@ -13,6 +14,7 @@ const getNotFoundComponent = () => {
 	);
 }
 
+// Wrapper for all routes.
 class Main extends React.Component {
 	constructor() {
 		super();
