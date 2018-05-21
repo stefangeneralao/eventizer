@@ -1,14 +1,20 @@
 import React from 'react';
 
-//Component that renders a ExhibitorCard
+// Component that renders a ExhibitorCard
 class Exhibitor extends React.Component {
 	render() {
-		const imgURL = "/static/media/" + this.props.image;
+		const imgURL = '/static/media/' + this.props.image;
 
 		return (
 			<div className="ExhibitorCard">
         <div className="ExhibitorCard__img">
-          <p><img className="ExhibitorMiniatureImage" src={imgURL} alt={this.props.label}/></p>
+          <p>
+						<img
+						className="ExhibitorMiniatureImage"
+						src={imgURL}
+						alt={this.props.label}
+						/>
+					</p>
         </div>
         <div className="ExhibitorCard__label">
           {this.props.label}
