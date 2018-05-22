@@ -31,6 +31,6 @@ describe('<EventComponent />', () => {
         cardsData={data.dates}
         />
       );
-    expect(wrapper.find('div')).toHaveLength(8);
+    expect(wrapper.find('div')).toHaveLength(9);
   });
 });
