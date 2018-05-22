@@ -96,7 +96,7 @@ class RegisterCard extends React.Component {
 
         axios.post("http://35.176.156.147:3001/exhibitor_form_request", fd , config).then(function() {
             console.log("It worked!");
-            alert("Tack! Ditt projekt är nu anmält.");
+            alert("Tack för din registrering! Ert projekt granskas just nu och kommer finnas tillgängligt på sidan på utställningsdagen.");
             /*When the information is submitted, the formElement resets, and the states gets the value "" and null (setState). formElement and componentThis is because this.blablalba refers back to axios.*/
             formElement.reset();
             componentThis.setState({
