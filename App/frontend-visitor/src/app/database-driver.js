@@ -6,28 +6,28 @@ const data = {
       "location": "NI:5",
       "time": "15.00-17.00",
       "description": "Här ska stå lite kort information om IA-dagen.",
-      "imgID": "ia.jpg",
+      "imgID": "projekt1.jpg",
       "exhibitors": []
     }, {
       "label": "Kåren informerar - Kårfullmäktige",
       "location": "NI:0",
       "time": "12.00-15.00",
       "description": "Kåren informerar om någonting viktigt",
-      "imgID": "kåren.jpg",
+      "imgID": "projekt1.jpg",
       "exhibitors": []
     }, {
       "label": "Sopplunch",
       "location": "Kölsvinet (Kårhuset)",
       "time": "11.30-13.30",
       "description": "Varje onsdag bjuder Kåren på gratis sopplunch för medlemmar",
-      "imgID": "sopplunch.jpg",
+      "imgID": "projekt1.jpg",
       "exhibitors": []
     }, {
       "label": "Mäklarmässa",
       "location": "Gäddan",
       "time": "10.00-16.00",
       "descrption": "Mäklarmässa för studenter på mäklarprogrammet",
-      "imgID": "mäklarbild.jpg",
+      "imgID": "projekt1.jpg",
       "exhibitors": []
     }]
   }, {
@@ -37,7 +37,7 @@ const data = {
       "location": "Kölsvinet (Kårhuset)",
       "time": "",
       "description": "Kåren tillgododser sina medlemmar med gratis kaffe",
-      "imgID": "kårenkaffe.jpg",
+      "imgID": "projekt1.jpg",
       "exhibitors": []
     }]
   }, {
@@ -47,14 +47,14 @@ const data = {
       "location": "NI:5",
       "time": "10.00-14.00",
       "description": "Studenter från kursen 'Systemutveckling och projekt' ställer ut sina projektarbeten",
-      "imgID": "projektutställning.jpg",
+      "imgID": "projekt1.jpg",
       "exhibitors": []
     }, {
       "label": "EF språkresor",
       "location": "OR:0",
       "time": "10.00-14.00",
       "description": "EF språkresor informerar om utlandsstudier",
-      "imgID": "EF.jpg",
+      "imgID": "projekt1.jpg",
       "exhibitors": []
     }]
   }]
