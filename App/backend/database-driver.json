@@ -1,1 +1,28 @@
-{"dates":[{"date":"2018-04-18","events":[{"label":"IA-dagen","location":"NI:5","time":"15.00-17.00","description":"Här ska stå lite kort information om IA-dagen.","imgID":"ia.jpg","exhibitors":[{"exhibitionID":"26ad5230-5d2b-11e8-b2a7-b9a2c94af6cd","label":"dwqmo","description":"dwqmio","imgURL":"dwqmo.26abf2a0-5d2b-11e8-b2a7-b9a2c94af6cd.jpg"},{"exhibitionID":"41aa6e40-5d2d-11e8-b2de-536a66e36116","label":"Test projekt nummer 2","description":"Beskrivning av test 2","imgURL":"Test projekt nummer 2.41a95cd0-5d2d-11e8-b2de-536a66e36116.jpg"},{"exhibitionID":"0a87f080-5d2e-11e8-85a9-397602074746","label":"Testprojekt 33333","description":"mdoqwmdio","imgURL":"Testprojekt 33333.0a870620-5d2e-11e8-85a9-397602074746.jpg"}]},{"label":"Kåren informerar - Kårfullmäktige","location":"NI:0","time":"12.00-15.00","description":"Kåren informerar om någonting viktigt","imgID":"kåren.jpg","exhibitors":[]},{"label":"Sopplunch","location":"Kölsvinet (Kårhuset)","time":"11.30-13.30","description":"Varje onsdag bjuder Kåren på gratis sopplunch för medlemmar","imgID":"sopplunch.jpg","exhibitors":[]},{"label":"Mäklarmässa","location":"Gäddan","time":"10.00-16.00","descrption":"Mäklarmässa för studenter på mäklarprogrammet","imgID":"mäklarbild.jpg","exhibitors":[]}]},{"date":"2018-04-20","events":[{"label":"Gratis kaffe","location":"Kölsvinet (Kårhuset)","time":"","description":"Kåren tillgododser sina medlemmar med gratis kaffe","imgID":"kårenkaffe.jpg","exhibitors":[]}]},{"date":"2018-05-24","events":[{"label":"Projektutställning år 1","location":"NI:5","time":"10.00-14.00","description":"Studenter från kursen 'Systemutveckling och projekt' ställer ut sina projektarbeten","imgID":"projektutställning.jpg","exhibitors":[]},{"label":"EF språkresor","location":"OR:0","time":"10.00-14.00","description":"EF språkresor informerar om utlandsstudier","imgID":"EF.jpg","exhibitors":[]}]}]}
+{
+  "dates": [{
+    "date": "2018-05-24",
+    "events": [{
+      "label": "Projektutställning Systemutveckling och projekt 1",
+      "location": "Niagara vån 5",
+      "time": "10.00-14.00",
+      "description": "Programmen Informationsarkitekt, Systemutveckling, Spelutveckling samt Datavetenskap och applikationsutveckling ställer ut sina projekt från kursen \"Systemutveckling och projekt 1\"",
+      "imgID": "ia.jpg",
+      "exhibitors": []
+    }, {
+      "label": "Projektutställning Systemutveckling och projekt 2",
+      "location": "Niagara vån 4",
+      "time": "10.00-14.00",
+      "description": "Projektgrupper från årskurs 2 på programmen Applikationsutveckling, Systemutveckling och Informationsarkitekt ställer ut sina projekt. Dessa projekt har skett i samarbete med externa aktörer.",
+      "imgID": "ia.jpg",
+      "exhibitors": []
+    }, {
+      "label": "Projektutställnin Datateknik och mobil IT",
+      "location": "Niagara vån E",
+      "time": "10.00-14.00",
+      "description": "På bottenvåningen så visas projekt från högskoleingenjörsutbildningen Datateknik och Mobil IT. Ingenjörerna presenterar sina innovationsidéer och prototyper.",
+      "imgID": "ia.jpg",
+      "exhibitors": []
+    }]
+  }]
+}
+
