@@ -8,21 +8,12 @@ class Exhibitor extends React.Component {
       <div className="ExhibitorCard">
         <div className="ExhibitorCard__img">
           <p>
-<<<<<<< HEAD
 						<img
   						className="ExhibitorMiniatureImage"
   						src={'http://35.176.156.147:3001/get_image?imageurl=' + this.props.image}
   						alt={this.props.label}
 						/>
 					</p>
-=======
-            <img
-              className="ExhibitorMiniatureImage"
-              src={'http://localhost:3001/get_image?imageurl=' + this.props.image}
-              alt={this.props.label}
-            />
-          </p>
->>>>>>> 65a0b0d5cdedab0c709bf4f6b33f3f9a2fca8e4f
         </div>
         <div className="ExhibitorCard__label">
           {this.props.label}
