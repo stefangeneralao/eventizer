@@ -8,7 +8,8 @@ import chai from 'chai';
 import expect from 'chai';
 import chaiEnzyme from 'chai-enzyme';
 
-chai.use(chaiEnzyme()) // Note the invocation at the end
+// Setup-file to enable unitttesting
+chai.use(chaiEnzyme())
 
 configure({ adapter: new Adapter() });
 
@@ -25,8 +26,8 @@ window.matchMedia =
 
 window.requestAnimationFrame =
   window.requestAnimationFrame ||
-  function(callback) {
-    setTimeout(callback, 0);
+    function(callback) {
+      setTimeout(callback, 0);
   };
 
 window.matchMedia = window.matchMedia || function() {
