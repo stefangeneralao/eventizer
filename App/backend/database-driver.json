@@ -6,23 +6,22 @@
       "location": "Niagara vån 5",
       "time": "10.00-14.00",
       "description": "Programmen Informationsarkitekt, Systemutveckling, Spelutveckling samt Datavetenskap och applikationsutveckling ställer ut sina projekt från kursen \"Systemutveckling och projekt 1\"",
-      "imgID": "ia.jpg",
+      "imgID": "projekt1.jpg",
       "exhibitors": []
     }, {
       "label": "Projektutställning Systemutveckling och projekt 2",
       "location": "Niagara vån 4",
       "time": "10.00-14.00",
       "description": "Projektgrupper från årskurs 2 på programmen Applikationsutveckling, Systemutveckling och Informationsarkitekt ställer ut sina projekt. Dessa projekt har skett i samarbete med externa aktörer.",
-      "imgID": "ia.jpg",
+      "imgID": "projekt2.jpg",
       "exhibitors": []
     }, {
-      "label": "Projektutställnin Datateknik och mobil IT",
+      "label": "Projektutställning Datateknik och mobil IT",
       "location": "Niagara vån E",
       "time": "10.00-14.00",
       "description": "På bottenvåningen så visas projekt från högskoleingenjörsutbildningen Datateknik och Mobil IT. Ingenjörerna presenterar sina innovationsidéer och prototyper.",
-      "imgID": "ia.jpg",
+      "imgID": "ingenjör.jpg",
       "exhibitors": []
     }]
   }]
 }
-
