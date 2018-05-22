@@ -17,7 +17,6 @@ describe('<EventContainer />', () => {
     expect(wrapper.hasClass("EventContainer"));
   });
 
-// Change date before deployment.
   it('should contains 4 EventComponent-children', () => {
     const wrapper = shallow(
       <EventContainer
