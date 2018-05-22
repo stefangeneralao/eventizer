@@ -10,7 +10,7 @@ class Exhibitor extends React.Component {
           <p>
 						<img
   						className="ExhibitorMiniatureImage"
-  						src={'http://localhost:3001/get_image?imageurl=' + this.props.image}
+  						src={'http://35.176.156.147:3001/get_image?imageurl=' + this.props.image}
   						alt={this.props.label}
 						/>
 					</p>

@@ -94,7 +94,7 @@ class RegisterCard extends React.Component {
         var formElement = event.target;
         var componentThis = this;
 
-        axios.post("http://localhost:3001/exhibitor_form_request", fd , config).then(function() {
+        axios.post("http://35.176.156.147:3001/exhibitor_form_request", fd , config).then(function() {
             console.log("It worked!");
             alert("Tack! Ditt projekt är nu anmält.");
             /*When the information is submitted, the formElement resets, and the states gets the value "" and null (setState). formElement and componentThis is because this.blablalba refers back to axios.*/
@@ -107,7 +107,10 @@ class RegisterCard extends React.Component {
                 event: null,
                 selectedFile: null
             });
-        });
+        })
+	.catch((err) => {
+		console.log(err);
+	});
     }
 
     fileSelectedHandler = event => {
