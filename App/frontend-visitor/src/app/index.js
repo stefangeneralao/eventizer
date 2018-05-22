@@ -11,13 +11,13 @@ class App extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			breadcrumb: "/",
 			store: store
 		};
 	}
 
+	// Component that fetch data from database and update state.
 	componentDidMount() {
-		axios.get('http://localhost:3001/get_store')
+		axios.get('http://35.176.156.147:3001/get_store')
 			.then(res => {
 				return res.data
 			})
@@ -27,11 +27,9 @@ class App extends React.Component {
 	}
 
 	render() {
-		console.log(this.state);
 		return (
 			<div className="App">
 				<Header />
-				{/*}<BreadCrumb />*/}
 				<Main store={this.state.store} />
 				<Footer />
 			</div>

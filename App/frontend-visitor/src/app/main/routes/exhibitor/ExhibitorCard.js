@@ -1,14 +1,19 @@
 import React from 'react';
+import axios from 'axios';
 
-//Component that renders a ExhibitorCard
+// Component that renders a ExhibitorCard
 class Exhibitor extends React.Component {
-	render() {
-		const imgURL = "/static/media/" + this.props.image;
-
-		return (
-			<div className="ExhibitorCard">
+  render() {
+    return (
+      <div className="ExhibitorCard">
         <div className="ExhibitorCard__img">
-          <p><img className="ExhibitorMiniatureImage" src={imgURL} alt={this.props.label}/></p>
+          <p>
+						<img
+  						className="ExhibitorMiniatureImage"
+  						src={'http://35.176.156.147:3001/get_image?imageurl=' + this.props.image}
+  						alt={this.props.label}
+						/>
+					</p>
         </div>
         <div className="ExhibitorCard__label">
           {this.props.label}
@@ -23,8 +28,8 @@ class Exhibitor extends React.Component {
           {this.props.description}
         </div>
       </div>
-		);
-	}
+    );
+  }
 }
 
 export default Exhibitor;
