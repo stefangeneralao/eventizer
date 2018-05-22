@@ -8,7 +8,7 @@ const data = {"dates":[{"date":"2018-04-18","events":[{"label":"IA-dagen","locat
 
 describe('ImageCarousel', function() {
   it('should have className ImageCarousel', () => {
-    const testData = [{"imageID": "ia.jpg", "eventLabel": "event1"}];
+    const testData = [{"imageID": "projekt1.jpg", "eventLabel": "event1"}];
     const wrapper = shallow(
       <ImageCarousel
       imageID = {testData}
