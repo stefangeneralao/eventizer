@@ -9,7 +9,7 @@ import RegisterForm from './routes/registerform';
 const getNotFoundComponent = () => {
   return (
     <div>
-      Sorry. Vi jobbar pÃ det. Kom tillbaka lite senare!
+      Sorry. Vi jobbar pÃ¥ det. Kom tillbaka lite senare!
     </div>
   );
 }
