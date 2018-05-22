@@ -9,7 +9,7 @@ import RegisterForm from './routes/registerform';
 const getNotFoundComponent = () => {
   return (
     <div>
-      not found
+      Sorry. Vi jobbar p√ det. Kom tillbaka lite senare!
     </div>
   );
 }
@@ -52,9 +52,9 @@ class Main extends React.Component {
     return (
       <main>
         <Switch>
-          <Route exact path="/" component={this.getRoot} />
+          {/*<Route exact path="/" component={this.getRoot} />
           <Route path="/event" component={this.getEvent} />
-          <Route path="/exhibitor" component={this.getExhibitor} />
+          <Route path="/exhibitor" component={this.getExhibitor} />*/}
           <Route path="/registerform" component={this.getRegisterForm} />
           <Route component={getNotFoundComponent} />
         </Switch>
