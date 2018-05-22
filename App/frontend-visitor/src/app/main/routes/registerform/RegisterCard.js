@@ -3,80 +3,80 @@ import axios from 'axios';
 
 // A form for exhibitators.
 class RegisterCard extends React.Component {
-	constructor() {
-		super()
-		this.state = {
-			selectedDate: null,
-			titleField: "",
-			descField: "",
-			date: null,
-			event: null,
-			selectedFile: null
-		}
-		this.handleSubmit = this.handleSubmit.bind(this);
-	}
+  constructor() {
+    super()
+    this.state = {
+      selectedDate: null,
+      titleField: "",
+      descField: "",
+      date: null,
+      event: null,
+      selectedFile: null
+    }
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
 
-	dateDropDownChangeHandler(event) {
-		this.setState({selectedDate: event.target.value});
-	}
+  dateDropDownChangeHandler(event) {
+    this.setState({selectedDate: event.target.value});
+  }
 
-	componentDidMount() {
-		this.setState({selectedDate: this.refs.dateDropDown.value});
-	}
+  componentDidMount() {
+    this.setState({selectedDate: this.refs.dateDropDown.value});
+  }
 
-	getDateDropDown() {
-		const dateDropDownOptions = this.props.store.dates.map((date, i) => {
-			return (
-				<option
-					key={i}
-					value={date.date}>
-					{date.date}
-				</option>
-			);
-		});
+  getDateDropDown() {
+    const dateDropDownOptions = this.props.store.dates.map((date, i) => {
+      return (
+        <option
+          key={i}
+          value={date.date}>
+          {date.date}
+        </option>
+      );
+    });
 
-		return (
-			<select
-				name="date"
-				onChange={(e) => {this.dateDropDownChangeHandler(e)}}
-				ref="dateDropDown" required>
-				<option value=""></option>
-				{dateDropDownOptions}
-			</select>
-		);
-	}
+    return (
+      <select
+        name="date"
+        onChange={(e) => {this.dateDropDownChangeHandler(e)}}
+        ref="dateDropDown" required>
+        <option value=""></option>
+        {dateDropDownOptions}
+      </select>
+    );
+  }
 
-	getEventDropDown() {
-		const events = [];
-		this.props.store.dates.forEach(date => {
-			if(date.date === this.state.selectedDate) {
-				date.events.forEach(event => {
-					events.push(event.label);
-				});
-			}
-		});
+  getEventDropDown() {
+    const events = [];
+    this.props.store.dates.forEach(date => {
+      if(date.date === this.state.selectedDate) {
+        date.events.forEach(event => {
+          events.push(event.label);
+        });
+      }
+    });
 
-		const eventDropDownOptions = events.map((event, i) => {
-			return (
-				<option key={i} value={event}>{event}</option>
-			);
-		});
+    const eventDropDownOptions = events.map((event, i) => {
+      return (
+        <option key={i} value={event}>{event}</option>
+      );
+    });
 
-		return (
-			<select
-				name="event" required>
-				<option value=""></option>
-				{eventDropDownOptions}
-			</select>
-		);
-	}
+    return (
+      <select
+        name="event" required>
+        <option value=""></option>
+        {eventDropDownOptions}
+      </select>
+    );
+  }
 
 
-	handleSubmit(event){
+  handleSubmit(event){
         /* When the information is sent to the server ("http://localhost:3001/exhibitor_form_request") it contains fd (formdata), an object which contains all of the information in the form. Config enables that the exhibitor can upload files (img:s) and then logs "It worked"*/
 
-		event.preventDefault();
-		console.log(event.target.titleField.value);
+    event.preventDefault();
+    console.log(event.target.titleField.value);
         console.log(event.target.descField.value);
         console.log(event.target.date.value);
         console.log(event.target.event.value);
@@ -119,75 +119,75 @@ class RegisterCard extends React.Component {
         })
     }
 
-	render() {
+  render() {
         console.log("Rerender");
-		console.log(this.state);
-		return (
-			<form onSubmit={this.handleSubmit}>
-				<div className= "FormWrapper">
-					<h2>Registrera en utställning</h2>
+    console.log(this.state);
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <div className= "FormWrapper">
+          <h2>Registrera en utställning</h2>
 
-					<div className="RegisterTitel">
-						<input
-							type="text"
-							name="titleField"
-							placeholder="Projektnamn"
-							required="required"
-							onChange={
-								event => {
-									this.setState({"titleField": event.target.value})
-								}
-							}
-						/>
-					</div>
-					<div className="RegisterDescription">
+          <div className="RegisterTitel">
+            <input
+              type="text"
+              name="titleField"
+              placeholder="Projektnamn"
+              required="required"
+              onChange={
+                event => {
+                  this.setState({"titleField": event.target.value})
+                }
+              }
+            />
+          </div>
+          <div className="RegisterDescription">
                         <textarea cols="50" rows="8"
                             name="descField"
                             placeholder="Beskriv kortfattat din utställning"
                             required="required"
-				            onChange={
+                    onChange={
                                 event => {
                                 this.setState({"descField": event.target.value})
                                 }
                             }>
                         </textarea>
-					</div>
+          </div>
 
-					<div className="RegisterDate">
-						<label className="RegisterFormLabel">Välj datum för event nedan:</label>
-						<div>
-							{this.getDateDropDown()}
-						</div>
-					</div>
+          <div className="RegisterDate">
+            <label className="RegisterFormLabel">Välj datum för event nedan:</label>
+            <div>
+              {this.getDateDropDown()}
+            </div>
+          </div>
 
-					<div className="RegisterEvent">
-						<label className="RegisterFormLabel">Välj event:</label>
-						<div>
-							{this.getEventDropDown()}
-						</div>
-					</div>
+          <div className="RegisterEvent">
+            <label className="RegisterFormLabel">Välj event:</label>
+            <div>
+              {this.getEventDropDown()}
+            </div>
+          </div>
 
-					<div className="RegisterUploadFiles">
-						<section>
-							<label className="RegisterFormLabel">Lägg till en bild:</label>
-							<div>
+          <div className="RegisterUploadFiles">
+            <section>
+              <label className="RegisterFormLabel">Lägg till en bild:</label>
+              <div>
                                 <input
                                 type="file"
                                 name="fileUpload"
                                 required="required"
                                 accept=".jpg, .jpeg, .png"
                                 onChange={this.fileSelectedHandler}/>
-				            </div>
-						</section>
+                    </div>
+            </section>
                     </div>
 
                     <div className="RegisterSubmit">
-						<button>Skicka!</button>
-					</div>
-				</div>
-			</form>
-		)
-	};
+            <button>Skicka!</button>
+          </div>
+        </div>
+      </form>
+    )
+  };
 }
 
 export default RegisterCard;
