@@ -5,7 +5,7 @@
       "label": "Projektutställning Systemutveckling och projekt 1",
       "location": "Niagara vån 5",
       "time": "10.00-14.00",
-      "description": "Programmen Informationsarkitekt, Systemutveckling, Spelutveckling samt Datavetenskap och applikationsutveckling ställer ut sina projekt från kursen \"Systemutveckling och projekt 1\"",
+      "description": "Programmen Informationsarkitekt, Systemutveckling, Spelutveckling samt Datavetenskap och applikationsutveckling ställer ut projekt från kursen Systemutveckling och projekt 1",
       "imgID": "projekt1.jpg",
       "exhibitors": [{
         "exhibitionID": "cdaa9d40-5e52-11e8-9ee4-951477ac8e57",
@@ -86,7 +86,7 @@
         "imgURL": "MyEsteeme App.f741b4f0-5e60-11e8-9ee4-951477ac8e57.png"
       }, {
         "exhibitionID": "03e6fdc0-5e73-11e8-9ee4-951477ac8e57",
-        "label": "Energiporten_Backend",
+        "label": "Energiporten Backend",
         "description": "Energiporten.se är en hemsida vars syfte är att förenkla för bostadsrättsföreningar(BRF) och dess medlemmar att registrera, uppdatera och jämföra sin energiförbrukning och dess kostnader. Målet med produkten är att öka medvetenheten kring bostadsrättsföreningars energiförbrukning och på så sätt sänka den totala energiförbrukningen. \r\n\r\nProjektgruppens mål var att förbättra registreringsprocessen.",
         "imgURL": "Energiporten_Backend.039f4660-5e73-11e8-9ee4-951477ac8e57.jpg"
       }]
