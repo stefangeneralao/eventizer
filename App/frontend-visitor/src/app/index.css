@@ -227,6 +227,7 @@ a {
 
   .App-title {
     font-size: 40px;
+    padding-top: 7px;
   }
 
   .EventComponent__event-label {
@@ -255,6 +256,12 @@ a {
 
   .ExhibitorMiniatureImage {
     width: 100%;
+  }
+
+  .HomeBtn.open {
+    top: 45px;
+    left: 30px;
+    width: 40px;
   }
 }
 
