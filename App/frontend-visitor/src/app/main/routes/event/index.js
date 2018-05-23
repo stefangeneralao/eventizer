@@ -58,7 +58,6 @@ class Event extends React.Component {
 
   render() {
     const eventData = this.getEventData();
-    console.log(eventData);
     if (eventData === null) {
       return (
         <div></div>
