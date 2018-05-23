@@ -23,11 +23,9 @@ a {
 
 	.App-header {
 	background-image: url('../images/headertestbild.jpg');
-  background-size: 100% auto;
   background-position: 0px -290px;
   background-repeat: no-repeat;
   background-attachment: fixed;
-	width: 100%;
 	}
 
 .HomeBtn.open {
