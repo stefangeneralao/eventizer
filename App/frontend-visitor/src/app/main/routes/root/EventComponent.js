@@ -92,7 +92,7 @@ class EventComponent extends React.Component {
 					{location}
 				</div>
 
-				<div>
+				<div className="EventComponent__moreBtn-wrapper">
 					{moreBtn}
 				</div>
 

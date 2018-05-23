@@ -20,9 +20,9 @@ class EventContainer extends React.Component {
     return events;
   }
 
-  render () {
+  render() {
     return (
-      <div>
+      <div className="EventContainer">
         {this.getEvents()}
       </div>
     );

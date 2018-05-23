@@ -6,6 +6,10 @@
 	text-align: center;
 }
 
+.slick-arrow.slick-next {
+  display: none !important;
+}
+
 a {
   text-decoration: none;
 }
@@ -15,17 +19,26 @@ a {
 }
 
 .App-header > h1 > a {
-  color: white;
+  color: black;
+	background-color: rgba(255, 255, 255, 0.9);
+	padding: 5px 10px;
   text-decoration: none;
-}
+	}
+
+	.App-header {
+	background-image: url('../images/headertestbild.jpg');
+  background-position: 0px -290px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+	}
 
 .HomeBtn.open {
-  float: left;
+
   filter: invert(1);
   width: 60px;
   position: absolute;
-  left: 10px;
-  top: 10px;
+  left: 60px;
+  top: 35px;
   z-index: +1;
 }
 
@@ -71,7 +84,7 @@ a {
 }
 
 .EventContainer {
-	padding-top: 50px;
+	padding-top: 30px;
 }
 
 .hidden {
@@ -87,7 +100,7 @@ a {
   padding: 15px;
   box-shadow: 0px 2px 0px 0px #E6E6E6;
 	display: grid;
-	grid-template-columns: 3fr 1fr 30px;
+	grid-template-columns: auto 190px 30px;
 	grid-template-rows: auto auto auto;
 	grid-template-areas:
 		'label location moreBtn'
@@ -103,8 +116,9 @@ a {
 	grid-area: location;
   color: #505054;
 	text-align: right;
-	width: 100px;
+	width: 50px;
 	padding-left: 30px;
+	margin-top: 4px;
 }
 
 .EventComponent__event-label {
@@ -112,7 +126,10 @@ a {
   text-decoration: none;
 	grid-area: label;
 	display: inline;
+	padding-right: 10px;
 }
+
+
 
 .EventComponent__moreBtn.open {
 	grid-area: moreBtn;
@@ -124,6 +141,8 @@ a {
 	grid-area: moreBtn;
 	transition: 150ms;
 }
+
+
 
 .EventComponent__event-label:hover {
 	color: #000000;
@@ -192,8 +211,17 @@ a {
   margin-left: 10px;
 }
 
-.EventCard__description, .ExhibitorCard__description {
+.EventCard__description {
   margin: 10px;
+}
+
+.EventComponent__event-description {
+  line-height: 30px;
+}
+
+.ExhibitorCard__description {
+  margin: 10px;
+  line-height: 30px;
 }
 
 .EventCard__time, .EventCard__date, .ExhibitorCard__time, .ExhibitorCard__date {
@@ -225,6 +253,7 @@ a {
 
   .App-title {
     font-size: 40px;
+    padding-top: 7px;
   }
 
   .EventComponent__event-label {
@@ -248,12 +277,26 @@ a {
   }
 
   .EventComponent__event-location {
-  	width: 100px;
   	padding-left: 30px;
   }
 
   .ExhibitorMiniatureImage {
     width: 100%;
+  }
+
+  .HomeBtn.open {
+    top: 45px;
+    left: 30px;
+    width: 40px;
+  }
+
+  .EventComponent__moreBtn {
+    position: relative;
+    right: 50px;
+  }
+
+  .EventComponent__moreBtn-wrapper {
+    width: 0;
   }
 }
 
@@ -287,7 +330,6 @@ a {
   }
 
   .EventComponent__event-location {
-  	width: 100px;
   	padding-left: 30px;
   }
 

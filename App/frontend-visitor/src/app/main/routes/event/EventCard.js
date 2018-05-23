@@ -49,13 +49,13 @@ class EventCard extends React.Component {
         <div className="EventCard__date">
           {eventDate}
           </div>
+        
+        <div className="EventCard__time">
+          Kl:{eventTime}
+        </div>
 
         <div className="EventCard__description">
           {eventDescription}
-        </div>
-
-        <div className="EventCard__time">
-          Kl:{eventTime}
         </div>
 
         <div>

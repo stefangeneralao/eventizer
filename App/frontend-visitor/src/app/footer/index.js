@@ -11,8 +11,10 @@ class Footer extends React.Component {
 			<div className="Footer">
 				<footer className="App-footer">
 					<div>
-						<p>Copyright © {this.getYear()} Eventizer</p>
-						<p>All rights reserved</p>
+						<img src={require("../../images/eventizer-minilogo.png")}
+						className="minilogo"
+						alt="minilogo"
+						/>
 					</div>
 				</footer>
 			</div>
