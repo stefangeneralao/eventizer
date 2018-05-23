@@ -91,5 +91,35 @@
         "imgURL": "Energiporten_Backend.039f4660-5e73-11e8-9ee4-951477ac8e57.jpg"
       }]
     }]
+  }, {
+    "date": "2018-05-30",
+    "events": [{
+      "label": "I huvudet på en professor",
+      "location": "Niagara caféet",
+      "time": "17.00-18.00",
+      "description": "För 20 år sedan bildades Malmö högskola. I år blev vi Malmö universitet. Det firar vi genom en ny populärvetenskaplig föreläsningsserie: ”I huvudet på en professor”.",
+      "imgID": "33204714_10156442129318057_7997774961135583232_n.jpg",
+      "exhibitors": [{
+        "exhibitionID": "I-huvudet-pa-en-professor",
+        "label": "I huvudet på en professor",
+        "description": "TEMA DIGITALISERING.\nDigitalisering har förändrat hur vi lever idag och den kommer fortsätta att förändra vårt samhälle. Experterna menar att det om tio år finns 5 miljarder uppkopplade prylar i världen. Det motsvarar ungefär fem uppkopplade saker per person. Vilka faror och möjligheter innebär detta? Hur säkerställer man att faktorer som personlig integritet och säkerhet inte åsidosätts? Paul Davidsson är professor i datavetenskap och föreståndare för forskningscentrumet Internet of Things and People vid Malmö universitet. Han forskar bland annat om artificiell intelligens och sakernas internet. Vilken roll spelar forskningen för den fortsatta digitaliseringen och på vilket sätt kan den bidra till ett samhälle som är säkert, hållbart och inkluderar alla?",
+        "imgURL": "33204714_10156442129318057_7997774961135583232_n.jpg"
+      }]
+    }]
+  }, {
+    "date": "2018-05-31",
+    "events": [{
+      "label": "Årets examensarbeten på IT- och ekonomiprogrammet",
+      "location": "Gäddan vån 4",
+      "time": "08.15-17.00",
+      "description": "Under två dagar kommer utgående studenter vid kandidatprogrammet för IT och ekonomi att presentera sina examensarbeten. Totalt presenterar 27 studentgrupper sina examensarbeten inom IT och ekonomi.",
+      "imgID": "33157694_10156442144313057_2022785861040472064_n.jpg",
+      "exhibitors": [{
+        "exhibitionID": "arets-examensarbeten-pa-it-och-ekonomiprogrammet",
+        "label": "Årets examensarbeten på IT- och ekonomiprogrammet",
+        "description": "Examensarbetena berör en mängd olika ämnen med relevans för IT och ekonomi såsom, bland annat, digital marknadsföring, molntjänster, GDPR, automatisering, artificiell intelligens, blockchain, digitala betalningsmetoder och digitalisering inom primärvården.",
+        "imgURL": "33157694_10156442144313057_2022785861040472064_n.jpg"
+      }]
+    }]
   }]
 }
