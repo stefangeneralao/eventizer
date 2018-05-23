@@ -222,6 +222,7 @@ a {
 .ExhibitorCard__description {
   margin: 10px;
   line-height: 30px;
+  white-space: pre-line;
 }
 
 .EventCard__time, .EventCard__date, .ExhibitorCard__time, .ExhibitorCard__date {
