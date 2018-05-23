@@ -96,7 +96,7 @@ a {
   bottom: auto;
 }
 .EventComponent {
-	margin-bottom: 10px;
+  margin-bottom: 10px;
   padding: 15px;
   box-shadow: 0px 2px 0px 0px #E6E6E6;
 	display: grid;
@@ -252,6 +252,18 @@ a {
     height: 100px;
   }
 
+  .EventComponent {
+  	margin-bottom: 10px;
+    padding: 15px;
+    box-shadow: 0px 2px 0px 0px #E6E6E6;
+  	grid-template-columns: 70% 15% 15%;
+  	grid-template-rows: auto auto auto;
+  	grid-template-areas:
+  		'label location moreBtn'
+  		'time time time'
+  		'description description description';
+  }
+
   .App-title {
     font-size: 40px;
     padding-top: 7px;
@@ -293,7 +305,7 @@ a {
 
   .EventComponent__moreBtn {
     position: relative;
-    right: 50px;
+    left: 40px;
   }
 
   .EventComponent__moreBtn-wrapper {
