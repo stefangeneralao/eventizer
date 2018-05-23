@@ -6,6 +6,10 @@
 	text-align: center;
 }
 
+.slick-arrow.slick-next {
+  display: none !important;
+}
+
 a {
   text-decoration: none;
 }
@@ -112,7 +116,7 @@ a {
 	grid-area: location;
   color: #505054;
 	text-align: right;
-	width: 150px;
+	width: 50px;
 	padding-left: 30px;
 	margin-top: 4px;
 }
@@ -125,6 +129,8 @@ a {
 	padding-right: 10px;
 }
 
+
+
 .EventComponent__moreBtn.open {
 	grid-area: moreBtn;
 	transform: rotate(180deg);
@@ -135,6 +141,8 @@ a {
 	grid-area: moreBtn;
 	transition: 150ms;
 }
+
+
 
 .EventComponent__event-label:hover {
 	color: #000000;
@@ -203,8 +211,17 @@ a {
   margin-left: 10px;
 }
 
-.EventCard__description, .ExhibitorCard__description {
+.EventCard__description {
   margin: 10px;
+}
+
+.EventComponent__event-description {
+  line-height: 30px;
+}
+
+.ExhibitorCard__description {
+  margin: 10px;
+  line-height: 30px;
 }
 
 .EventCard__time, .EventCard__date, .ExhibitorCard__time, .ExhibitorCard__date {
@@ -271,6 +288,15 @@ a {
     top: 45px;
     left: 30px;
     width: 40px;
+  }
+
+  .EventComponent__moreBtn {
+    position: relative;
+    right: 50px;
+  }
+
+  .EventComponent__moreBtn-wrapper {
+    width: 0;
   }
 }
 
