@@ -20,12 +20,12 @@ a {
 }
 
 .HomeBtn.open {
-  float: left;
+
   filter: invert(1);
   width: 60px;
   position: absolute;
-  left: 10px;
-  top: 10px;
+  left: 60px;
+  top: 35px;
   z-index: +1;
 }
 
