@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from 'axios';
 
 // Component that renders a ExhibitorCard
 class Exhibitor extends React.Component {
