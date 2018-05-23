@@ -53,20 +53,27 @@ class Event extends React.Component {
       }
     }
 
-    return dates;
+    return null;
   }
 
   render() {
     const eventData = this.getEventData();
-    return (
-      <EventCard
-        title={eventData.title}
-        description={eventData.description}
-        date={eventData.date}
-        time={eventData.time}
-        exhibitorContainers={eventData.exhibitorContainers}
-      />
-    );
+    console.log(eventData);
+    if (eventData === null) {
+      return (
+        <div></div>
+      );
+    } else {
+      return (
+        <EventCard
+          title={eventData.title}
+          description={eventData.description}
+          date={eventData.date}
+          time={eventData.time}
+          exhibitorContainers={eventData.exhibitorContainers}
+        />
+      );
+    }
   }
 }
 
