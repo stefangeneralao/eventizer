@@ -44,7 +44,7 @@ class Main extends React.Component {
 
   getRegisterForm() {
     return (
-      <RegisterForm store={this.props.store} closed={true}/>
+      <RegisterForm store={this.props.store} closed={false} />
     );
   }
 
