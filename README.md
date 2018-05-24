@@ -1,9 +1,8 @@
 # Eventizer
 The official Eventizer-repository.
 
-## Setup
-### Make sure Node 9 and NPM is installed
-Run command in terminal:
+## Pre-setup
+Make sure Node 9 and NPM is installed by executing the following command in terminal:
 
 ```bash
 node -v
@@ -19,6 +18,7 @@ v9.x.x
 
 If not, head over to [nodejs.org](https://nodejs.org/en/) and install/update Node for your system.
 
+## Setup
 ### Install
 Setup all dependencies with command:
 
