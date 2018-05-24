@@ -47,7 +47,7 @@ This will fail if you already have something listening at port 3000, then the CL
 Would you like to run the app on another port instead? (Y/n)
 ```
 
-Accept the suggestion and the local front-end server should start at the suggested port.
+Accept the suggestion and the local front-end-server should start at the suggested port.
 
 ### Contributing
 Please report any issues.
