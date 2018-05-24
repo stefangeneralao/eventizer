@@ -1,0 +1,13 @@
+{
+  "name": "App",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install": "npm install --prefix ./App/backend & npm install --prefix ./App/frontend-visitor",
+    "start": "npm start --prefix ./App/backend & npm start --prefix ./App/frontend-visitor"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
