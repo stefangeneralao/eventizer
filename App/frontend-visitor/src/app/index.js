@@ -17,7 +17,7 @@ class App extends React.Component {
 
 	// Component that fetch data from database and update state.
 	componentDidMount() {
-		axios.get('http://35.176.156.147:3001/get_store')
+		axios.get('http://localhost:3001/get_store')
 			.then(res => {
 				return res.data
 			})
