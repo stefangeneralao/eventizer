@@ -16,13 +16,4 @@ describe('<DateContainer />', () => {
       );
     expect(wrapper.hasClass("DateContainer"));
   });
-
-  it('should contain DateConteiner-child', () => {
-    const wrapper = shallow(
-      <DateContainer
-        cardsData={data.dates}
-        />
-      );
-    expect(wrapper.find(DateCard)).toHaveLength(3);
-  });
 });
