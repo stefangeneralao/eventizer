@@ -51,5 +51,3 @@ Accept the suggestion and the local front-end-server should start at the suggest
 
 ### Contributing
 Please report any issues.
-
-#### Eventizer
