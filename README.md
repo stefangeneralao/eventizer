@@ -20,6 +20,11 @@ If not, head over to [nodejs.org](https://nodejs.org/en/) and install/update Nod
 
 ## Setup
 ### Install
+Clone repository and execute
+```bash
+cd eventizer
+```
+
 Setup all dependencies with command:
 
 ```bash
